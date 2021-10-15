@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "168529452328",
+    "project_id": "auth-f8b68",
+    "storage_bucket": "auth-f8b68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168529452328:android:967783693ac9d20b83441d",
+        "android_client_info": {
+          "package_name": "com.example.wellnesmeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168529452328-lpdamjil6g6a1p91pfe70sbk2tg7bokv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvmwP_9GJAoO0Fb_9_F-jCLGXYSgUe6rU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168529452328-lpdamjil6g6a1p91pfe70sbk2tg7bokv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
