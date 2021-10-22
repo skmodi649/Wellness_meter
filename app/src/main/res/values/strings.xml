@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wellnes meter</string>
+    <string name="app_name">Wellness meter</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -108,4 +108,13 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="made_with_love_by_the_iip_team">Made with love by the IIP Team</string>
+    <string name="email">Email</string>
+    <string name="Register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="register_user">REGISTER USER</string>
+    <string name="i_accept_the_terms_and_conditions">I accept the terms and conditions</string>
+    <string name="age">Age</string>
 </resources>

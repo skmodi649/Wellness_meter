@@ -1,8 +1,10 @@
 package com.example.wellnesmeter;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,10 +22,11 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     private TextView registerUser;
     private EditText fullname , age , email , password;
-    private ProgressBar progressBar;
+    private CheckBox checkBox;
     private FirebaseAuth mAuth;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,12 +34,9 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance();
-
+        checkBox = (CheckBox)findViewById(R.id.agree);
         registerUser = (Button) findViewById(R.id.reg);
         registerUser.setOnClickListener(this);
-
-        progressBar = (ProgressBar) findViewById(R.id.progress);
-
         fullname = (EditText) findViewById(R.id.user);
         age = (EditText) findViewById(R.id.age);
         email = (EditText) findViewById(R.id.email);
@@ -49,6 +49,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         switch(view.getId())
         {
             case R.id.reg:
+                checkBox = (CheckBox)view;
                 registerUser();
                 break;
         }
@@ -96,8 +97,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
-
 
         mAuth.createUserWithEmailAndPassword(elecmail , elecpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -110,16 +109,13 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(RegisterUser.this,"User has been registered successfully!",Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.VISIBLE);
-
+                            if(task.isSuccessful() && checkBox.isChecked()) {
+                                    Toast.makeText(RegisterUser.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                            }
                                 // redirect ot Login Layout is registered successfully
 
-                            }
                             else{
                                 Toast.makeText(RegisterUser.this,"Failed to register! Try Again!",Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.GONE);
                             }
                         }
                     });

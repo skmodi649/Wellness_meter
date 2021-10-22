@@ -10,7 +10,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,19 +20,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-     private TextView registra;
-     private EditText editTextEmail , editTextPassword;
-     private Button signin;
+    private EditText editTextEmail , editTextPassword;
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        registra = (TextView) findViewById(R.id.register);
+        TextView registra = (TextView) findViewById(R.id.register);
         registra.setOnClickListener(this);
 
-        signin = (Button) findViewById(R.id.login);
+        Button signin = (Button) findViewById(R.id.login);
         signin.setOnClickListener(this);
 
         editTextEmail = (EditText) findViewById(R.id.username);
@@ -74,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        if(Patterns.EMAIL_ADDRESS.matcher(email).matches() == false){
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             editTextEmail.setError("Enter a valid Email");
             editTextEmail.requestFocus();
             return;
@@ -92,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful()) {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+                    assert user != null;
                     if (user.isEmailVerified()) {
                         // redirect to user profile
                         startActivity(new Intent(MainActivity.this, ProfileActivity.class));
