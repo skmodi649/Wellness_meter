@@ -3,6 +3,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.webkit.RenderProcessGoneDetail;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -22,10 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     private TextView registerUser;
     private EditText fullname , age , email , password;
-    private CheckBox checkBox;
     private FirebaseAuth mAuth;
-
-
+    private ProgressBar progressBar;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +33,15 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance();
-        checkBox = (CheckBox)findViewById(R.id.agree);
         registerUser = (Button) findViewById(R.id.reg);
         registerUser.setOnClickListener(this);
         fullname = (EditText) findViewById(R.id.user);
         age = (EditText) findViewById(R.id.age);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.pass);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
     }
+
 
     @Override
     public void onClick(View view)
@@ -49,7 +49,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         switch(view.getId())
         {
             case R.id.reg:
-                checkBox = (CheckBox)view;
                 registerUser();
                 break;
         }
@@ -97,7 +96,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-
+        progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(elecmail , elecpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -109,19 +108,23 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful() && checkBox.isChecked()) {
+                            if(task.isSuccessful()) {
                                     Toast.makeText(RegisterUser.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                    progressBar.setVisibility(View.GONE);
                             }
                                 // redirect ot Login Layout is registered successfully
 
                             else{
                                 Toast.makeText(RegisterUser.this,"Failed to register! Try Again!",Toast.LENGTH_LONG).show();
+                                progressBar.setVisibility(View.GONE);
                             }
+
                         }
                     });
                 }
                 else{
                     Toast.makeText(RegisterUser.this,"Failed to register! Try Again!",Toast.LENGTH_LONG).show();
+                    progressBar.setVisibility(View.GONE);
                 }
             }
         });
