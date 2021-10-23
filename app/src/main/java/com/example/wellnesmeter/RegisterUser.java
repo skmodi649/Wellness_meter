@@ -1,11 +1,10 @@
 package com.example.wellnesmeter;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.webkit.RenderProcessGoneDetail;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -39,7 +38,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         age = (EditText) findViewById(R.id.age);
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.pass);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
     }
 
 
@@ -111,6 +110,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                             if(task.isSuccessful()) {
                                     Toast.makeText(RegisterUser.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
                                     progressBar.setVisibility(View.GONE);
+                                    startActivity(new Intent(RegisterUser.this , MainActivity.class));
                             }
                                 // redirect ot Login Layout is registered successfully
 

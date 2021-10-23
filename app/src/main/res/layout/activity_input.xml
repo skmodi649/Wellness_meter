@@ -9,22 +9,21 @@
     android:background="@drawable/img_1">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00FCFDFD"
+        android:layout_marginTop="24dp"
+        android:background="#05FDFAFA"
         android:fontFamily="sans-serif-black"
-        android:shadowColor="#403C3C"
-        android:text="DATA INPUT"
-        android:textColor="#5C4D59"
+        android:text="@string/wellness_meter"
+        android:textColor="#49C855"
+        android:textColorLink="#EC6060"
         android:textSize="34sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
