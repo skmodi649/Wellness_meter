@@ -8,33 +8,6 @@
     android:background="@drawable/img_1">
 
 
-    <ScrollView
-        android:layout_width="266dp"
-        android:layout_height="424dp"
-        android:background="#D3C6C6"
-        android:overScrollMode="always"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="600dp"
-                android:text="Accept the terms and conditions" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -53,21 +26,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bmi"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
-        android:alpha="0.75"
-        android:text="HEALTH INDEX CALCULATOR"
-        android:textColor="#E3E32B"
-        app:backgroundTint="#95170A51"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DuplicateClickableBoundsCheck" />
-
-    <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,5 +37,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/bmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="328dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
