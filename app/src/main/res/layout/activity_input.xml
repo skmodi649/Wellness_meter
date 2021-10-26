@@ -6,24 +6,64 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".InputActivity"
-    android:background="@drawable/img_1">
+    android:background="@drawable/bmi">
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/wt"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="352dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:text="Input"
+        android:textColor="#D7CCC8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/ht"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="352dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:gravity="center_horizontal"
+        android:text="Input"
+        android:textColor="#D7CCC8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/bmires"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="#05FDFAFA"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/wellness_meter"
-        android:textColor="#49C855"
-        android:textColorLink="#EC6060"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
+        android:layout_marginBottom="184dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
-
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:text="CALCULATE"
+        android:textSize="8sp"
+        app:backgroundTint="#73347A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
