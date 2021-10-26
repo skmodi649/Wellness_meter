@@ -11,15 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WellnesMeter">
         <activity
+            android:name=".HealthIndexCalc"
+            android:exported="true" />
+        <activity
             android:name=".TermsAndConditions"
             android:exported="true"
             android:label="@string/title_activity_termsandcondtions"
             android:theme="@style/Theme.WellnesMeter.NoActionBar" />
         <activity
             android:name=".InputActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ProfileActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

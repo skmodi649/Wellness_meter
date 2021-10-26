@@ -34,5 +34,6 @@
     <string name="sign_up">Sign up</string>
     <string name="decline">Decline</string>
     <string name="confirm">Confirm</string>
+    <string name="calculate">CALCULATE</string>
 
 </resources>

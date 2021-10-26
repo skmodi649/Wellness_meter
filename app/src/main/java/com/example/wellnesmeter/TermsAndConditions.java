@@ -26,7 +26,7 @@ public class TermsAndConditions extends AppCompatActivity implements View.OnClic
         switch (view.getId())
         {
             case R.id.agree:
-                startActivity(new Intent(TermsAndConditions.this , ProfileActivity.class));
+                startActivity(new Intent(TermsAndConditions.this , InputActivity.class));
                 break;
 
             case R.id.decline:
