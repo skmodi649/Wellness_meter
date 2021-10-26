@@ -45,31 +45,33 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="70dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="140dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
         android:text="@string/login"
-        android:textSize="10sp"
-        app:backgroundTint="#81802B"
+        android:textSize="12sp"
+        app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#040404" />
+        app:rippleColor="#493939" />
 
     <Button
         android:id="@+id/register"
-        android:layout_width="96dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="84dp"
-        android:text="@string/Register"
-        android:textSize="10sp"
-        app:backgroundTint="#81802B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:text="@string/sign_up"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="#CA8F8F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#000000" />
+        app:rippleColor="#493939" />
 
     <TextView
         android:id="@+id/textView2"
