@@ -73,20 +73,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#493939" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/made_with_love_by_the_iip_team"
-        android:textColor="#72B85F"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
 
     <ProgressBar
         android:id="@+id/progressBar"
