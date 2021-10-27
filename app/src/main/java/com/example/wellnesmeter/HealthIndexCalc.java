@@ -1,19 +1,21 @@
 package com.example.wellnesmeter;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.lang.String;
 
 
 public class HealthIndexCalc extends AppCompatActivity {
-     Button logout ;
-     Button calculate;
-     EditText bmi;
-     EditText pulse;
+    Button logout;
+    Button calculate;
+    EditText bmi;
+    EditText pulse;
     EditText bp;
     EditText sugar;
     EditText cholesterol;
@@ -26,6 +28,7 @@ public class HealthIndexCalc extends AppCompatActivity {
     TextView textcholesterol;
     TextView textsodium;
     TextView textresp;
+    double totalscore;
 
 
     @Override
@@ -53,8 +56,35 @@ public class HealthIndexCalc extends AppCompatActivity {
         textsodium = findViewById(R.id.sodiumtext);
         textresp = findViewById(R.id.resptext);
 
-        logout.setOnClickListener(view -> startActivity(new Intent(HealthIndexCalc.this , MainActivity.class)));
+        totalscore = 0.0;
 
-        calculate.setOnClickListener(view -> textbmi.setText("Normal!"));
+        logout.setOnClickListener(view -> startActivity(new Intent(HealthIndexCalc.this, MainActivity.class)));
+
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                double bmival = Double.parseDouble(bmi.getText().toString());
+
+                if (bmival < 18.50) {
+                    textbmi.setText("Underweight!");
+                    totalscore = totalscore + 7;
+                }
+                else if (bmival >= 18.50 && bmi <= 24.9) {
+                    textbmi.setText("Normal!");
+                    totalscore = totalscore + 10;
+                }
+                else if (bmival >= 25 && bmi <= 29.9) {
+                    textbmi.setText("Overweight!");
+                    totalscore = totalscore + 7;
+                }
+                else {
+                    textbmi.setText("Obese!");
+                    totalscore = totalscore + 5;
+                }
+
+            }
+        });
     }
-    }
+
+}
