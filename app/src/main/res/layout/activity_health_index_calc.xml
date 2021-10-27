@@ -4,17 +4,281 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HealthIndexCalc">
+    tools:context=".HealthIndexCalc"
+    android:background="@color/teal_700">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Health Index Calculator!"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <ImageView
+        android:layout_width="246dp"
+        android:layout_height="42dp"
+        android:src="@drawable/hic2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hicbmi"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="580dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_bmi"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/hicpulse"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="536dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_pulse_rate"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/hicbp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="492dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_blood_pressure"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/hicsugar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="444dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_blood_sugar_level"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/hiccholesterol"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_cholesterol_level"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/hicsodium"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="356dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_sodium_level"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/hicresp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="312dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_respiratory_rate"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#E8DDDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:text="Calculate Score"
+        android:textColor="#E8DDDD"
+        android:textStyle="bold"
+        app:backgroundTint="#11A308"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="74dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0"
+        android:text="Log out"
+        android:textAllCaps="false"
+        android:textColor="#E8DDDD"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:backgroundTint="#CF9D9D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bmitext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="590dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/pulsetext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="546dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bptext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="502dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sugartext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="454dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cholesteroltext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="410dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sodiumtext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="364dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resptext"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="322dp"
+        android:gravity="center_horizontal"
+        android:textColor="#42FF00"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Log Out"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

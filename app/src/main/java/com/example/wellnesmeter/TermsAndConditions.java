@@ -14,8 +14,8 @@ public class TermsAndConditions extends AppCompatActivity implements View.OnClic
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conditions);
-        button = (Button) findViewById(R.id.agree);
-        button1 = (Button) findViewById(R.id.decline);
+        button = findViewById(R.id.agree);
+        button1 = findViewById(R.id.decline);
         button.setOnClickListener(this);
         button1.setOnClickListener(this);
 

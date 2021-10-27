@@ -35,5 +35,14 @@
     <string name="decline">Decline</string>
     <string name="confirm">Confirm</string>
     <string name="calculate">CALCULATE</string>
+    <string name="enter_bmi">Enter bmi</string>
+    <string name="enter_pulse">Enter pulse</string>
+    <string name="enter_pulse_rate">Enter Pulse Rate</string>
+    <string name="enter_blood_pressure">Enter Blood Pressure</string>
+    <string name="enter_blood_sugar_level">Enter Blood Sugar Level</string>
+    <string name="enter_cholesterol_level">Enter Cholesterol Level</string>
+    <string name="enter_sodium_level">Enter Sodium Level</string>
+    <string name="enter_respiratory_rate">Enter Respiratory rate</string>
+    <string name="proceed_to_health_index_calculator">Proceed to Health Index Calculator</string>
 
 </resources>

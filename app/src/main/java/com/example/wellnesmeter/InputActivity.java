@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +16,6 @@ public class InputActivity extends AppCompatActivity {
     private EditText height;
     private TextView bmires;
     private Button result;
-    private Button logout;
     private TextView Message;
     private Button Health;
 
@@ -31,7 +28,6 @@ public class InputActivity extends AppCompatActivity {
         height = (EditText) findViewById(R.id.ht);
         bmires = (TextView) findViewById(R.id.bmires);
         result = (Button) findViewById(R.id.calres);
-        logout = (Button) findViewById(R.id.lout);
         Message = (TextView) findViewById(R.id.message);
         Health = (Button) findViewById(R.id.health);
 
@@ -59,14 +55,6 @@ public class InputActivity extends AppCompatActivity {
                         }
                     }
         });
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(InputActivity.this , MainActivity.class));
-            }
-        });
-
         Health.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -10,35 +10,35 @@
 
     <EditText
         android:id="@+id/wt"
-        android:layout_width="153dp"
+        android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginBottom="384dp"
         android:ems="10"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:hint="Input"
         android:inputType="numberDecimal"
         android:textColor="#FFFFFF"
         android:textColorHint="#93756A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/ht"
-        android:layout_width="153dp"
+        android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginBottom="384dp"
         android:ems="10"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:hint="Input"
         android:inputType="numberDecimal"
         android:textColor="#FFFFFF"
         android:textColorHint="#93756A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -46,7 +46,7 @@
         android:id="@+id/bmires"
         android:layout_width="248dp"
         android:layout_height="89dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="180dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:minHeight="48dp"
@@ -55,7 +55,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -63,31 +63,15 @@
         android:id="@+id/calres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="136dp"
         android:text="@string/calculate"
-        android:textSize="8sp"
+        android:textSize="12sp"
         app:backgroundTint="#73347A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SmallSp" />
-
-    <Button
-        android:id="@+id/lout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:alpha="0"
-        android:backgroundTint="@color/design_default_color_on_primary"
-        android:text="Log out"
-        android:textColor="#212121"
-        android:textSize="8sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/message"
@@ -106,43 +90,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.659" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Log out"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
         android:id="@+id/health"
-        android:layout_width="213dp"
+        android:layout_width="wrap_content"
         android:layout_height="52dp"
-        android:layout_marginBottom="4dp"
-        android:alpha="0"
-        android:text="Health Index Calculator"
-        android:textSize="10sp"
+        android:layout_marginBottom="40dp"
+        android:alpha="1"
+        android:text="@string/proceed_to_health_index_calculator"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F17864"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Health Index Calculator"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
