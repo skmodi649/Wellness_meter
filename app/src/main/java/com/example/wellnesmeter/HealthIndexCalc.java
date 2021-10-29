@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import java.lang.String;
 
 
@@ -23,6 +26,7 @@ public class HealthIndexCalc extends AppCompatActivity {
     EditText sodium;
     EditText resp;
     EditText bpa;
+    TextView goscore;
     double totalscore;
 
 
@@ -44,168 +48,245 @@ public class HealthIndexCalc extends AppCompatActivity {
         resp = findViewById(R.id.hicresp);
         age = findViewById(R.id.hciage);
         bpa = findViewById(R.id.hcibpa);
+        goscore = findViewById(R.id.scarce);
         totalscore = 0.0;
 
-        logu.setOnClickListener(view -> startActivity(new Intent(HealthIndexCalc.this, MainActivity.class)));
 
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {
-                BMI();
-                PULSE();
-                SUGAR();
-                CHOLESTEROL();
-                SODIUM();
-                RESPIRATORY();
-                BLOOD_PRESSURE();
+                logu.setOnClickListener(view -> startActivity(new Intent(HealthIndexCalc.this, MainActivity.class)));
 
-                Intent myIntent = new Intent(HealthIndexCalc.this, ResultActivity.class);
-                myIntent.putExtra("key", totalscore);
-                startActivity(myIntent);
-            }
-        });
-    }
+                calculate.setOnClickListener(new View.OnClickListener() {
+
+                    @SuppressLint("SetTextI18n")
+                    @Override
+                    public void onClick(View view) {
+                        double totbmi = BMI();
+                        double totpulse = PULSE();
+                        double totsugar = SUGAR();
+                        double totcholes = CHOLESTEROL();
+                        double totsod = SODIUM();
+                        double totresp = RESPIRATORY();
+                        double totbp = BLOOD_PRESSURE();
+
+                        if (totbp != 0 && totbmi != 0 && totpulse != 0 && totsugar != 0 && totcholes != 0 && totsod != 0 && totresp != 0) {
+                            totalscore = totbmi + totpulse + totsugar + totcholes + totsod + totresp + totbp;
+                            String scare = Double.toString(totalscore);
+                            Intent myIntent = new Intent(HealthIndexCalc.this , ResultActivity.class);
+                            Bundle b = new Bundle();
+                            b.putString("key" , scare);
+                            myIntent.putExtras(b);
+                            startActivity(myIntent);
+                        }
+
+                        else{
+                            Toast.makeText(HealthIndexCalc.this, "Check the data entered!!", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+        }
 
     @SuppressLint("SetTextI18n")
-    public void BMI() {
-        CharSequence bmistr = bmi.getText();
-
-        double bmival = Double.parseDouble(String.valueOf(bmistr));
+    public  double BMI() {
+        int totbmi;
+        String bmistr = bmi.getText().toString().trim();
+        if(bmistr.isEmpty()){
+            bmi.setError("BMI is required!");
+            bmi.requestFocus();
+            return 0;
+        }
+        double bmival = Double.parseDouble(bmistr);
         bmival = Math.round(bmival * 100.0) / 100.0;
         if (bmival < 18.50) {
-            totalscore = totalscore + 7;
+             return 7;
         } else if (bmival >= 18.50 && bmival <= 25) {
-            totalscore = totalscore + 10;
+            return 10;
         } else if (bmival > 25 && bmival <= 30) {
-            totalscore = totalscore + 7;
+            return 7;
         } else if (bmival > 30 && bmival <= 40) {
-            totalscore = totalscore + 5;
+            return 5;
         } else {
-            totalscore = totalscore + 4;
+            return 4;
         }
     }
 
     @SuppressLint("SetTextI18n")
-    public void PULSE() {
-        CharSequence pulsestr = pulse.getText();
-        double pulseval = Double.parseDouble(String.valueOf(pulsestr));
+    public double PULSE() {
+        String pulsestr = pulse.getText().toString().trim();
+
+        if(pulsestr.isEmpty()){
+            pulse.setError("Pulse rate is required!");
+            pulse.requestFocus();
+            return 0;
+        }
+
+        double pulseval = Double.parseDouble(pulsestr);
         pulseval = Math.round(pulseval * 100.0) / 100.0;
 
-        if (pulseval >= 60 && pulseval <= 100)
-            totalscore = totalscore + 10;
+        if (pulseval >= 60 && pulseval <= 100){
+            return 10;}
         else {
             if (pulseval < 60) {
-                double pulseScore = (100 - (((60 - pulseval) / 40) * 100)) / 10;
-                totalscore = totalscore + pulseScore;
+                double pulseScore = (100 - ((60 - pulseval) / 40 * 100)) / 10;
+                return pulseScore;
             } else {
-                double pulseScore = (100 - (((100 - pulseval) / 40) * 100)) / 10;
-                totalscore = totalscore + pulseScore;
+                double pulseScore = (100 - ((pulseval - 100) / 40 * 100)) / 10;
+                return pulseScore;
             }
         }
     }
 
-    public void SUGAR() {
-        CharSequence sugarstr = sugar.getText();
-        double sugarval = Double.parseDouble(String.valueOf(sugarstr));
+    public double SUGAR() {
+        String sugarstr = sugar.getText().toString().trim();
+
+        if(sugarstr.isEmpty()){
+            sugar.setError("Sugar level is required!");
+            sugar.requestFocus();
+            return 0;
+        }
+
+        double sugarval = Double.parseDouble(sugarstr);
         sugarval = Math.round(sugarval * 100.0) / 100.0;
 
         if (sugarval >= 70 && sugarval <= 100) {
-            totalscore = totalscore + 10;
+            return 10;
         } else {
             if (sugarval > 100 && sugarval < 125) {
-                totalscore = totalscore + 8;
+                return 8;
             } else {
-                totalscore = totalscore + 5;
+                return 5;
             }
         }
     }
 
-    public void CHOLESTEROL() {
-        CharSequence agestr = age.getText();
-        int ageval = Integer.parseInt(String.valueOf(agestr));
-        CharSequence cholesstr = cholesterol.getText();
-        double cholesval = Double.parseDouble(String.valueOf(cholesstr));
+    public double CHOLESTEROL() {
+        String agestr = age.getText().toString().trim();
+
+        if(agestr.isEmpty()){
+            age.setError("Age is required!");
+            age.requestFocus();
+            return 0;
+        }
+
+
+        int ageval = Integer.parseInt(agestr);
+        String cholesstr = cholesterol.getText().toString().trim();
+
+        if(cholesstr.isEmpty()){
+            cholesterol.setError("Cholesterol level is required!");
+            cholesterol.requestFocus();
+            return 0;
+        }
+
+
+        double cholesval = Double.parseDouble(cholesstr);
         cholesval = Math.round(cholesval * 100.0) / 100.0;
 
         if (ageval <= 19) {
             if (cholesval < 170) {
-                totalscore = totalscore + 10;
+                return 10;
             } else {
                 double choles = (100 - (cholesval - 170)) / 10;
-                totalscore = totalscore + choles;
+                return choles;
             }
         }
 
-        if (ageval > 19) {
+        else {
             if (cholesval >= 125 && cholesval <= 200) {
-                totalscore = totalscore + 10;
+                return 10;
             } else {
                 if (cholesval < 125) {
                     double choles = (100 - (125 - cholesval)) / 10;
-                    totalscore = totalscore + choles;
+                    return choles;
                 } else {
                     double choles = (100 - (cholesval - 200)) / 10;
-                    totalscore = totalscore + choles;
+                    return choles;
                 }
             }
         }
     }
 
-    public void SODIUM() {
-        CharSequence sodstr = sodium.getText();
-        double sodval = Double.parseDouble(String.valueOf(sodstr));
+    public double SODIUM() {
+        String sodstr = sodium.getText().toString().trim();
+
+        if(sodstr.isEmpty()){
+            sodium.setError("Sodium level is required!");
+            sodium.requestFocus();
+            return 0;
+        }
+
+        double sodval = Double.parseDouble(sodstr);
         sodval = Math.round(sodval * 100.0) / 100.0;
 
         if (sodval >= 135 && sodval <= 145) {
-            totalscore = totalscore + 10;
+            return 10;
         } else {
             if (sodval < 135) {
                 double sod = (100 - (135 - sodval)) / 10;
-                totalscore = totalscore + sod;
+                return sod;
             } else {
                 double sod = (100 - (sodval - 145)) / 10;
-                totalscore = totalscore + sod;
+                return sod;
             }
         }
     }
 
-    public void RESPIRATORY() {
-        CharSequence respstr = resp.getText();
-        double respval = Double.parseDouble(String.valueOf(respstr));
+    public double RESPIRATORY() {
+        String respstr = resp.getText().toString().trim();
+
+        if(respstr.isEmpty()){
+            resp.setError("Respiratory level is required!");
+            resp.requestFocus();
+            return 0;
+        }
+
+        double respval = Double.parseDouble(respstr);
         respval = Math.round(respval * 100.0) / 100.0;
 
         if (respval >= 12 && respval <= 20) {
-            totalscore = totalscore + 10;
+            return 10;
         } else if (respval < 12) {
             double respa = (100 - (12 - respval) * 4) / 10;
-            totalscore = totalscore + respa;
+            return respa;
         } else if (respval > 20 && respval <= 25) {
             double respa = (100 - (respval - 20) * 4) / 10;
-            totalscore = totalscore + respa;
+            return respa;
         } else {
             double respa = (100 - (respval - 25) * 4) / 10;
-            totalscore = totalscore + respa;
+            return  respa;
         }
     }
 
-    public void BLOOD_PRESSURE() {
-        CharSequence bloodstrs = bp.getText();
-        CharSequence bloodstra = bpa.getText();
-        double bpsys = Double.parseDouble(String.valueOf(bloodstrs));
-        double bpdys = Double.parseDouble(String.valueOf(bloodstra));
+    public double BLOOD_PRESSURE() {
+        String bloodstrs = bp.getText().toString().trim();
+
+        if(bloodstrs.isEmpty()){
+            bp.setError("Systolic bp is required!");
+            bp.requestFocus();
+            return 0;
+        }
+
+
+        String bloodstra = bpa.getText().toString().trim();
+
+        if(bloodstra.isEmpty()){
+            bpa.setError("Diastolic bp is required!");
+            bpa.requestFocus();
+            return 0;
+        }
+
+        double bpsys = Double.parseDouble(bloodstrs);
+        double bpdys = Double.parseDouble(bloodstra);
         bpsys = Math.round(bpsys * 100.0) / 100.0;
         bpdys = Math.round(bpdys * 100.0) / 100.0;
-        if (bpdys <= 80 && bpdys <= 120) {
-            totalscore = totalscore + 10;
+        if (bpdys <= 80 && bpsys <= 120) {
+            return 10;
         }
 
-        if ((bpsys > 120 && bpsys <= 139) && (bpdys > 80 && bpdys <= 89)) {
-            totalscore = totalscore + 7;
+        else if ((bpsys > 120 && bpsys <= 139) && (bpdys > 80 && bpdys <= 89)) {
+            return 7;
         }
 
-        if (bpsys > 140 && bpdys > 90) {
-            totalscore = totalscore + 5;
+        else{
+            return 5;
         }
     }
 }
