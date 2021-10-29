@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class InputActivity extends AppCompatActivity {
@@ -18,6 +20,7 @@ public class InputActivity extends AppCompatActivity {
     private Button result;
     private TextView Message;
     private Button Health;
+    private ImageButton logu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class InputActivity extends AppCompatActivity {
         result = (Button) findViewById(R.id.calres);
         Message = (TextView) findViewById(R.id.message);
         Health = (Button) findViewById(R.id.health);
+        logu = (ImageButton) findViewById(R.id.logout);
 
         result.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -59,6 +63,13 @@ public class InputActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(InputActivity.this , HealthIndexCalc.class));
+            }
+        });
+
+        logu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(InputActivity.this , MainActivity.class));
             }
         });
     }

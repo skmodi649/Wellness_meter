@@ -44,5 +44,6 @@
     <string name="enter_sodium_level">Enter Sodium Level</string>
     <string name="enter_respiratory_rate">Enter Respiratory rate</string>
     <string name="proceed_to_health_index_calculator">Proceed to Health Index Calculator</string>
+    <string name="enter_the_age">Enter the Age</string>
 
 </resources>

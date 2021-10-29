@@ -63,7 +63,7 @@
         android:id="@+id/calres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="144dp"
         android:text="@string/calculate"
         android:textSize="12sp"
         app:backgroundTint="#73347A"
@@ -93,15 +93,27 @@
     <Button
         android:id="@+id/health"
         android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:layout_marginBottom="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
         android:alpha="1"
-        android:text="@string/proceed_to_health_index_calculator"
+        android:text="@string/health_index_calculator"
         android:textSize="12sp"
         android:textStyle="bold"
         app:backgroundTint="#F17864"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_power_off"
+        app:tint="#000000"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
