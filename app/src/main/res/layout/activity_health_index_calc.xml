@@ -50,10 +50,10 @@
         android:id="@+id/hicbp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="310dp"
+        android:layout_marginBottom="312dp"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="@string/enter_blood_pressure"
+        android:hint="@string/enter_systolic_bp"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColor="#393230"
@@ -61,7 +61,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -139,9 +139,9 @@
     <Button
         android:id="@+id/score"
         android:layout_width="138dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:alpha="0"
+        android:alpha="1"
         android:text="Health Index"
         android:textAllCaps="false"
         android:textColor="#E8DDDD"
@@ -168,19 +168,6 @@
         tools:ignore="SpeakableTextPresentCheck"
         app:tint="#000000" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Health Index"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <EditText
         android:id="@+id/hciage"
         android:layout_width="wrap_content"
@@ -197,6 +184,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/hcibpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="312dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_diastolic_bp"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#393230"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
