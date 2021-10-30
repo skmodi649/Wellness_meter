@@ -2,6 +2,7 @@ package com.example.wellnesmeter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ public class ResultActivity extends AppCompatActivity {
 
     TextView result_score;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,9 @@ public class ResultActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         String receivingdata = b.getString("key");
-        result_score.setText(receivingdata);
+        double data = Double.parseDouble(receivingdata);
+        double percent = (data * 100) / 70;
+        String percentstr = Double.toString(percent).trim();
+        result_score.setText(receivingdata+"%");
     }
 }

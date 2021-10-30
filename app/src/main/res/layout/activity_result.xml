@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultActivity">
+    tools:context=".ResultActivity"
+    android:background="@drawable/score">
 
     <TextView
         android:id="@+id/rescore"
-        android:gravity="center_horizontal"
         android:layout_width="171dp"
         android:layout_height="84dp"
-        android:textSize="60sp"
-        android:textStyle="bold|italic"
         android:ems="10"
+        android:gravity="center_horizontal"
+        android:textColor="#30F802"
+        android:textSize="70sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

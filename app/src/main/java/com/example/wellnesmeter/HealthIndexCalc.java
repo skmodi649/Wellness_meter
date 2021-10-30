@@ -256,16 +256,18 @@ public class HealthIndexCalc extends AppCompatActivity {
     }
 
     public double BLOOD_PRESSURE() {
+
         String bloodstrs = bp.getText().toString().trim();
+        String bloodstra = bpa.getText().toString().trim();
 
         if(bloodstrs.isEmpty()){
             bp.setError("Systolic bp is required!");
+            bpa.setError("Diastolic bp is required!");
             bp.requestFocus();
+            bpa.requestFocus();
             return 0;
         }
 
-
-        String bloodstra = bpa.getText().toString().trim();
 
         if(bloodstra.isEmpty()){
             bpa.setError("Diastolic bp is required!");
