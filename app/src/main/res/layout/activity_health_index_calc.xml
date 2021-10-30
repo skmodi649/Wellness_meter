@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HealthIndexCalc"
-    android:background="@drawable/forma">
+    android:alpha="1"
+    android:background="@drawable/forma"
+    tools:context=".HealthIndexCalc">
 
 
     <EditText
@@ -138,10 +139,10 @@
 
     <Button
         android:id="@+id/score"
-        android:layout_width="138dp"
+        android:layout_width="195dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:alpha="1"
+        android:alpha="0"
         android:text="Health Index"
         android:textAllCaps="false"
         android:textColor="#E8DDDD"
@@ -150,7 +151,6 @@
         app:backgroundTint="#305AE4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#000000" />
 
@@ -165,8 +165,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_lock_power_off"
-        tools:ignore="SpeakableTextPresentCheck"
-        app:tint="#000000" />
+        app:tint="#000000"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/hciage"
@@ -205,17 +205,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/scarce"
-        android:layout_width="217dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="112dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:textColor="#58EF06"
-        android:textSize="50sp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Health Index"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

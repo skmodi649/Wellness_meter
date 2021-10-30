@@ -48,7 +48,6 @@ public class HealthIndexCalc extends AppCompatActivity {
         resp = findViewById(R.id.hicresp);
         age = findViewById(R.id.hciage);
         bpa = findViewById(R.id.hcibpa);
-        goscore = findViewById(R.id.scarce);
         totalscore = 0.0;
 
 

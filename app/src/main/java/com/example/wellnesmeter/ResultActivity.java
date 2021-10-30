@@ -24,7 +24,10 @@ public class ResultActivity extends AppCompatActivity {
         String receivingdata = b.getString("key");
         double data = Double.parseDouble(receivingdata);
         double percent = (data * 100) / 70;
-        String percentstr = Double.toString(percent).trim();
-        result_score.setText(receivingdata+"%");
+        percent = Math.round(percent * 100.0) / 100.0;
+        int val = (int) percent;
+        String percentstr = Integer.toString(val).trim();
+        percentstr = percentstr + "%";
+        result_score.setText(percentstr);
     }
 }

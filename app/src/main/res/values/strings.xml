@@ -48,5 +48,6 @@
     <string name="enter_systolic_blood_pressure">Enter Systolic blood pressure</string>
     <string name="enter_systolic_bp">Enter systolic BP</string>
     <string name="enter_diastolic_bp">Enter diastolic BP</string>
+    <string name="percen">%</string>
 
 </resources>
