@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
-    private TextView registerUser;
     private EditText fullname , age , email , password;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
@@ -32,24 +30,21 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance();
-        registerUser = (Button) findViewById(R.id.reg);
+        TextView registerUser = findViewById(R.id.reg);
         registerUser.setOnClickListener(this);
-        fullname = (EditText) findViewById(R.id.user);
-        age = (EditText) findViewById(R.id.age);
-        email = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.pass);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        fullname = findViewById(R.id.user);
+        age = findViewById(R.id.age);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.pass);
+        progressBar = findViewById(R.id.progressBar);
     }
 
 
     @Override
     public void onClick(View view)
     {
-        switch(view.getId())
-        {
-            case R.id.reg:
-                registerUser();
-                break;
+        if (view.getId() == R.id.reg) {
+            registerUser();
         }
     }
     private void registerUser()
@@ -77,7 +72,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        if(Patterns.EMAIL_ADDRESS.matcher(elecmail).matches() == false){
+        if(!Patterns.EMAIL_ADDRESS.matcher(elecmail).matches()){
             email.setError("Please provide a valid email id");
             email.requestFocus();
             return;

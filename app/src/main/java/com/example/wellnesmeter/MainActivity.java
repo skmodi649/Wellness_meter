@@ -1,5 +1,6 @@
 package com.example.wellnesmeter;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -29,20 +30,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TextView registra = (TextView) findViewById(R.id.register);
+        TextView registra = findViewById(R.id.register);
         registra.setOnClickListener(this);
 
-        Button signin = (Button) findViewById(R.id.login);
+        Button signin = findViewById(R.id.login);
         signin.setOnClickListener(this);
 
-        editTextEmail = (EditText) findViewById(R.id.username);
-        editTextPassword = (EditText) findViewById(R.id.password);
+        editTextEmail = findViewById(R.id.username);
+        editTextPassword = findViewById(R.id.password);
 
-        progressBar = (ProgressBar)findViewById(R.id.progressBar);  //initialising the progress bar
+        progressBar = findViewById(R.id.progressBar);  //initialising the progress bar
 
         mAuth = FirebaseAuth.getInstance();
 
     }
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view)
     {

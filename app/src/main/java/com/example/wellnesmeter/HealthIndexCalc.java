@@ -3,12 +3,10 @@ package com.example.wellnesmeter;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.view.View;
 import android.widget.Button;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.String;
@@ -26,7 +24,6 @@ public class HealthIndexCalc extends AppCompatActivity {
     EditText sodium;
     EditText resp;
     EditText bpa;
-    TextView goscore;
     double totalscore;
 
 
@@ -53,32 +50,27 @@ public class HealthIndexCalc extends AppCompatActivity {
 
                 logu.setOnClickListener(view -> startActivity(new Intent(HealthIndexCalc.this, MainActivity.class)));
 
-                calculate.setOnClickListener(new View.OnClickListener() {
+                calculate.setOnClickListener(view -> {
+                    double totbmi = BMI();
+                    double totpulse = PULSE();
+                    double totsugar = SUGAR();
+                    double totcholes = CHOLESTEROL();
+                    double totsod = SODIUM();
+                    double totresp = RESPIRATORY();
+                    double totbp = BLOOD_PRESSURE();
 
-                    @SuppressLint("SetTextI18n")
-                    @Override
-                    public void onClick(View view) {
-                        double totbmi = BMI();
-                        double totpulse = PULSE();
-                        double totsugar = SUGAR();
-                        double totcholes = CHOLESTEROL();
-                        double totsod = SODIUM();
-                        double totresp = RESPIRATORY();
-                        double totbp = BLOOD_PRESSURE();
+                    if (totbp != 0 && totbmi != 0 && totpulse != 0 && totsugar != 0 && totcholes != 0 && totsod != 0 && totresp != 0) {
+                        totalscore = totbmi + totpulse + totsugar + totcholes + totsod + totresp + totbp;
+                        String scare = Double.toString(totalscore);
+                        Intent myIntent = new Intent(HealthIndexCalc.this , ResultActivity.class);
+                        Bundle b = new Bundle();
+                        b.putString("key" , scare);
+                        myIntent.putExtras(b);
+                        startActivity(myIntent);
+                    }
 
-                        if (totbp != 0 && totbmi != 0 && totpulse != 0 && totsugar != 0 && totcholes != 0 && totsod != 0 && totresp != 0) {
-                            totalscore = totbmi + totpulse + totsugar + totcholes + totsod + totresp + totbp;
-                            String scare = Double.toString(totalscore);
-                            Intent myIntent = new Intent(HealthIndexCalc.this , ResultActivity.class);
-                            Bundle b = new Bundle();
-                            b.putString("key" , scare);
-                            myIntent.putExtras(b);
-                            startActivity(myIntent);
-                        }
-
-                        else{
-                            Toast.makeText(HealthIndexCalc.this, "Check the data entered!!", Toast.LENGTH_LONG).show();
-                        }
+                    else{
+                        Toast.makeText(HealthIndexCalc.this, "Check the data entered!!", Toast.LENGTH_LONG).show();
                     }
                 });
         }
@@ -124,11 +116,9 @@ public class HealthIndexCalc extends AppCompatActivity {
             return 10;}
         else {
             if (pulseval < 60) {
-                double pulseScore = (100 - ((60 - pulseval) / 40 * 100)) / 10;
-                return pulseScore;
+                return (100 - ((60 - pulseval) / 40 * 100)) / 10;
             } else {
-                double pulseScore = (100 - ((pulseval - 100) / 40 * 100)) / 10;
-                return pulseScore;
+                return (100 - ((pulseval - 100) / 40 * 100)) / 10;
             }
         }
     }
@@ -183,8 +173,7 @@ public class HealthIndexCalc extends AppCompatActivity {
             if (cholesval < 170) {
                 return 10;
             } else {
-                double choles = (100 - (cholesval - 170)) / 10;
-                return choles;
+                return (100 - (cholesval - 170)) / 10;
             }
         }
 
@@ -193,11 +182,9 @@ public class HealthIndexCalc extends AppCompatActivity {
                 return 10;
             } else {
                 if (cholesval < 125) {
-                    double choles = (100 - (125 - cholesval)) / 10;
-                    return choles;
+                    return (100 - (125 - cholesval)) / 10;
                 } else {
-                    double choles = (100 - (cholesval - 200)) / 10;
-                    return choles;
+                    return (100 - (cholesval - 200)) / 10;
                 }
             }
         }
@@ -219,11 +206,9 @@ public class HealthIndexCalc extends AppCompatActivity {
             return 10;
         } else {
             if (sodval < 135) {
-                double sod = (100 - (135 - sodval)) / 10;
-                return sod;
+                return (100 - (135 - sodval)) / 10;
             } else {
-                double sod = (100 - (sodval - 145)) / 10;
-                return sod;
+                return (100 - (sodval - 145)) / 10;
             }
         }
     }
@@ -243,14 +228,11 @@ public class HealthIndexCalc extends AppCompatActivity {
         if (respval >= 12 && respval <= 20) {
             return 10;
         } else if (respval < 12) {
-            double respa = (100 - (12 - respval) * 4) / 10;
-            return respa;
+            return (100 - (12 - respval) * 4) / 10;
         } else if (respval > 20 && respval <= 25) {
-            double respa = (100 - (respval - 20) * 4) / 10;
-            return respa;
+            return (100 - (respval - 20) * 4) / 10;
         } else {
-            double respa = (100 - (respval - 25) * 4) / 10;
-            return  respa;
+            return (100 - (respval - 25) * 4) / 10;
         }
     }
 
