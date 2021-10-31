@@ -62,9 +62,24 @@ public class HealthIndexCalc extends AppCompatActivity {
                     if (totbp != 0 && totbmi != 0 && totpulse != 0 && totsugar != 0 && totcholes != 0 && totsod != 0 && totresp != 0) {
                         totalscore = totbmi + totpulse + totsugar + totcholes + totsod + totresp + totbp;
                         String scare = Double.toString(totalscore);
+                        String sbmi = Double.toString(totbmi);
+                        String spulse = Double.toString(totpulse);
+                        String ssugar = Double.toString(totsugar);
+                        String scholes = Double.toString(totcholes);
+                        String ssod= Double.toString(totsod);
+                        String sresp = Double.toString(totresp);
+                        String sbp = Double.toString(totbp);
                         Intent myIntent = new Intent(HealthIndexCalc.this , ResultActivity.class);
                         Bundle b = new Bundle();
                         b.putString("key" , scare);
+                        b.putString("bmi" , sbmi);
+                        b.putString("pulse" , spulse);
+                        b.putString("sugar" , ssugar);
+                        b.putString("choles" , scholes);
+                        b.putString("sodium" , ssod);
+                        b.putString("respiratory" , sresp);
+                        b.putString("bp" , sbp);
+
                         myIntent.putExtras(b);
                         startActivity(myIntent);
                     }

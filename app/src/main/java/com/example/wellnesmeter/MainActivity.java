@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button signin = findViewById(R.id.login);
         signin.setOnClickListener(this);
 
-        editTextEmail = findViewById(R.id.username);
+        Button about = findViewById(R.id.about);
+        about.setOnClickListener(this);
+
+                editTextEmail = findViewById(R.id.username);
         editTextPassword = findViewById(R.id.password);
 
         progressBar = findViewById(R.id.progressBar);  //initialising the progress bar
@@ -57,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.login:
                 userLogin();
                 break;
+
+            case R.id.about:
+                startActivity(new Intent(MainActivity.this , AboutUsActivity.class));
         }
     }
 
