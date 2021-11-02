@@ -2,6 +2,8 @@ package com.example.wellnesmeter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.widget.Button;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ public class ResultActivity extends AppCompatActivity {
     TextView result_sodium;
     TextView result_resp;
     TextView result_cholesterol;
+    Button home;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -58,5 +61,8 @@ public class ResultActivity extends AppCompatActivity {
         result_sugar.setText(sugardata);
         String cholesteroldata = b.getString("cholesterol");
         result_cholesterol.setText(cholesteroldata);
+
+        home = findViewById(R.id.profhome);
+        home.setOnClickListener(view -> startActivity(new Intent(ResultActivity.this , InputActivity.class)));
     }
 }
