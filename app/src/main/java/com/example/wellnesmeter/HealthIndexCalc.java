@@ -75,7 +75,7 @@ public class HealthIndexCalc extends AppCompatActivity {
                         b.putString("bmi" , sbmi);
                         b.putString("pulse" , spulse);
                         b.putString("sugar" , ssugar);
-                        b.putString("choles" , scholes);
+                        b.putString("cholesterol" , scholes);
                         b.putString("sodium" , ssod);
                         b.putString("respiratory" , sresp);
                         b.putString("bp" , sbp);
