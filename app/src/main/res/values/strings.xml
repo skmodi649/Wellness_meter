@@ -54,5 +54,8 @@
     <string name="version_1_0">Version : 1.0</string>
     <string name="note">**Note : The Health Index percentage generated is totally based upon the data entered by the user . Users are adviced not to take it as the final verdict of their health\'s status, consulting professionals is always recommended.</string>
     <string name="suraj_kumar2020_vitstudent_ac_in">Suraj.kumar2020@vitstudent.ac.in</string>
+    <string name="health_index">Health Index</string>
+    <string name="air_quality_index">Air Quality Index</string>
+    <string name="covid_19_dashboard">Covid 19 Dashboard</string>
 
 </resources>

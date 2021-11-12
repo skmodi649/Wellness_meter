@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WellnesMeter">
         <activity
+            android:name=".Tabs_activity"
+            android:exported="true" />
+        <activity
             android:name=".AboutUsActivity"
             android:exported="true" />
         <activity
