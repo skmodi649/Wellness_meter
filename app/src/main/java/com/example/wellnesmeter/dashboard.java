@@ -69,6 +69,16 @@ public class dashboard extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response.toString());
 
+                    tvCases.setText(jsonObject.getString( "cases"));
+                    tvRecovered.setText(jsonObject.getString("recovered"));
+                    tvCritical.setText(jsonObject.getString("critical"));
+                    tvActive.setText(jsonObject.getString("active"));
+                    tvTodayCases.setText(jsonObject.getString("todayCases"));
+                    tvTotalDeaths.setText(jsonObject.getString("deaths"));
+                    tvTodayDeaths.setText(jsonObject.getString("todayDeaths"));
+                    tvAffectedCountries.setText(jsonObject.getString("affectedCountries"));
+
+
 
 
 
