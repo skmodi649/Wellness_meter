@@ -45,7 +45,7 @@ public class dashboard extends AppCompatActivity {
         tvAffectedCountries = findViewById(R.id.tvAffectedCountries);
 
         simpleArcLoader = findViewById(R.id.loader);
-        scrollView = findViewById(R.id.scrollView);
+        scrollView = findViewById(R.id.scrollStats);
         pieChart = findViewById(R.id.pieChart);
 
 
@@ -59,7 +59,7 @@ public class dashboard extends AppCompatActivity {
     // Now we are going to use the Rest API for the covid 19
     private void fetchData(){
 
-        String url = "https://corona.lmao.ninja/v2/all/";
+        String url = "https://corona.lmao.ninja/v2/all";
 
         simpleArcLoader.start();
 
@@ -85,8 +85,8 @@ public class dashboard extends AppCompatActivity {
 
                     pieChart.addPieSlice(new PieModel("Cases", Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#FFA726")));
                     pieChart.addPieSlice(new PieModel("Recovered",Integer.parseInt(tvRecovered.getText().toString()), Color.parseColor("#66BB6A")));
-                    pieChart.addPieSlice(new PieModel("Deaths",Integer.parseInt(tvTodayDeaths.getText().toString()), Color.parseColor("#29B6F6")));
-                    pieChart.addPieSlice(new PieModel("Active",Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#EF5350")));
+                    pieChart.addPieSlice(new PieModel("Deaths",Integer.parseInt(tvTotalDeaths.getText().toString()), Color.parseColor("#EF5350")));
+                    pieChart.addPieSlice(new PieModel("Active",Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#29B6F6")));
                     pieChart.startAnimation();
 
                     simpleArcLoader.stop();
@@ -99,7 +99,6 @@ public class dashboard extends AppCompatActivity {
                     simpleArcLoader.stop();
                     simpleArcLoader.setVisibility(View.GONE);
                     scrollView.setVisibility(View.VISIBLE);
-
                 }
 
 
