@@ -34,5 +34,4 @@ public class TermsAndConditions extends AppCompatActivity implements View.OnClic
                 break;
         }
     }
-
 }
