@@ -2,6 +2,7 @@ package com.example.wellnesmeter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
@@ -18,6 +19,7 @@ import com.leo.simplearcloader.SimpleArcDialog;
 import com.leo.simplearcloader.SimpleArcLoader;
 
 import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -79,15 +81,25 @@ public class dashboard extends AppCompatActivity {
                     tvAffectedCountries.setText(jsonObject.getString("affectedCountries"));
 
 
+                    //Now lets set data for the pie Chart
 
+                    pieChart.addPieSlice(new PieModel("Cases", Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#FFA726")));
+                    pieChart.addPieSlice(new PieModel("Recovered",Integer.parseInt(tvRecovered.getText().toString()), Color.parseColor("#66BB6A")));
+                    pieChart.addPieSlice(new PieModel("Deaths",Integer.parseInt(tvTodayDeaths.getText().toString()), Color.parseColor("#29B6F6")));
+                    pieChart.addPieSlice(new PieModel("Active",Integer.parseInt(tvCases.getText().toString()), Color.parseColor("#EF5350")));
+                    pieChart.startAnimation();
 
-
-
-
+                    simpleArcLoader.stop();
+                    simpleArcLoader.setVisibility(View.GONE);
+                    scrollView.setVisibility(View.VISIBLE);
 
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    simpleArcLoader.stop();
+                    simpleArcLoader.setVisibility(View.GONE);
+                    scrollView.setVisibility(View.VISIBLE);
+
                 }
 
 
@@ -95,6 +107,9 @@ public class dashboard extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                simpleArcLoader.stop();
+                simpleArcLoader.setVisibility(View.GONE);
+                scrollView.setVisibility(View.VISIBLE);
                 Toast.makeText(dashboard.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
