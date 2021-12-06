@@ -13,6 +13,6 @@ public class MyCustomAdapter extends ArrayAdapter<CountryModel> {
 
 
     public MyCustomAdapter(Context context, List<CountryModel> countryModelList) {
-        super(context, );
+        super(context, R.layout.list_custom_item);
     }
 }
