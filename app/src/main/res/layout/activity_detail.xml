@@ -97,7 +97,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="0"
-            android:id="@+id/tvTodayCasesCases"
+            android:id="@+id/tvTodayCases"
             android:gravity="end"
             android:textAlignment="textEnd"
             android:textColor="@color/color_one"
