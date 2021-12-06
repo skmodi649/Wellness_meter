@@ -24,6 +24,7 @@ public class HealthIndexCalc extends AppCompatActivity {
     EditText sodium;
     EditText resp;
     EditText bpa;
+    EditText hcicalcium;
     double totalscore;
 
 
@@ -45,6 +46,7 @@ public class HealthIndexCalc extends AppCompatActivity {
         resp = findViewById(R.id.hicresp);
         age = findViewById(R.id.hciage);
         bpa = findViewById(R.id.hcibpa);
+        hcicalcium = findViewById(R.id.hiccalcium);
         totalscore = 0.0;
 
 
@@ -56,17 +58,19 @@ public class HealthIndexCalc extends AppCompatActivity {
                     double totsugar = SUGAR();
                     double totcholes = CHOLESTEROL();
                     double totsod = SODIUM();
+                    double totcal = CALCIUM();
                     double totresp = RESPIRATORY();
                     double totbp = BLOOD_PRESSURE();
 
-                    if (totbp != 0 && totbmi != 0 && totpulse != 0 && totsugar != 0 && totcholes != 0 && totsod != 0 && totresp != 0) {
-                        totalscore = totbmi + totpulse + totsugar + totcholes + totsod + totresp + totbp;
+                    if (totbp != 0 && totbmi != 0 && totpulse != 0 && totsugar != 0 && totcholes != 0 && totsod != 0 && totresp != 0 && totcal != 0) {
+                        totalscore = totbmi + totpulse + totsugar + totcholes + totsod + totresp + totbp + totcal;
                         String scare = Double.toString(totalscore);
                         String sbmi = Double.toString(totbmi);
                         String spulse = Double.toString(totpulse);
                         String ssugar = Double.toString(totsugar);
                         String scholes = Double.toString(totcholes);
                         String ssod= Double.toString(totsod);
+                        String scal = Double.toString(totcal);
                         String sresp = Double.toString(totresp);
                         String sbp = Double.toString(totbp);
                         Intent myIntent = new Intent(HealthIndexCalc.this , ResultActivity.class);
@@ -79,6 +83,7 @@ public class HealthIndexCalc extends AppCompatActivity {
                         b.putString("sodium" , ssod);
                         b.putString("respiratory" , sresp);
                         b.putString("bp" , sbp);
+                        b.putString("calcium", scal);
 
                         myIntent.putExtras(b);
                         startActivity(myIntent);
@@ -225,6 +230,25 @@ public class HealthIndexCalc extends AppCompatActivity {
             } else {
                 return (100 - (sodval - 145)) / 10;
             }
+        }
+    }
+
+    public double CALCIUM() {
+        String sodstr = hcicalcium.getText().toString().trim();
+
+        if(sodstr.isEmpty()){
+            hcicalcium.setError("Sodium level is required!");
+            hcicalcium.requestFocus();
+            return 0;
+        }
+
+        double sodval = Double.parseDouble(sodstr);
+        sodval = Math.round(sodval * 100.0) / 100.0;
+
+        if (sodval >= 8.6 && sodval <= 10.4) {
+            return 10;
+        } else {
+            return 6;
         }
     }
 

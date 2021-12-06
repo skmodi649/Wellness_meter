@@ -20,6 +20,7 @@ public class ResultActivity extends AppCompatActivity {
     TextView result_sodium;
     TextView result_resp;
     TextView result_cholesterol;
+    TextView result_calcium;
     Button home;
 
     @SuppressLint("SetTextI18n")
@@ -36,11 +37,12 @@ public class ResultActivity extends AppCompatActivity {
         result_sodium = findViewById(R.id.disodium);
         result_resp = findViewById(R.id.disresp);
         result_cholesterol = findViewById(R.id.discholes);
+        result_calcium = findViewById(R.id.dicalcium);
 
         Bundle b = getIntent().getExtras();
         String receivingdata = b.getString("key");
         double data = Double.parseDouble(receivingdata);
-        double percent = (data * 100) / 70;
+        double percent = (data * 100) / 80;
         percent = Math.round(percent * 100.0) / 100.0;
         int val = (int) percent;
         String percentstr = Integer.toString(val).trim();
@@ -55,6 +57,8 @@ public class ResultActivity extends AppCompatActivity {
         result_bp.setText(bpdata);
         String sodiumdata = b.getString("sodium");
         result_sodium.setText(sodiumdata);
+        String calciumdata = b.getString("calcium");
+        result_calcium.setText(calciumdata);
         String respdata = b.getString("respiratory");
         result_resp.setText(respdata);
         String sugardata = b.getString("sugar");
