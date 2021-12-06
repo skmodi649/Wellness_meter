@@ -3,6 +3,7 @@ package com.example.wellnesmeter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,5 +21,13 @@ public class Tabs_activity extends AppCompatActivity {
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));
         covid.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , dashboard.class)));
+        aqi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("https://nodejs-health-index-calculator.herokuapp.com/"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
     }
 }
