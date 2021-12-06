@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wellnesmeter">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/wellmet"
         android:supportsRtl="true"
         android:theme="@style/Theme.WellnesMeter">
+        <activity
+            android:name=".AffectedCountries"
+            android:exported="true" />
         <activity
             android:name=".dashboard"
             android:exported="true" />
