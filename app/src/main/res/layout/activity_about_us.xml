@@ -50,7 +50,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Repsitory link : skmodi649/wellness_meter"
+        android:text="Repository link : skmodi649/wellness_meter"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
