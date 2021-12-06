@@ -2,9 +2,11 @@ package com.example.wellnesmeter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +31,7 @@ public class dashboard extends AppCompatActivity {
     SimpleArcLoader simpleArcLoader;
     PieChart pieChart;
     ScrollView scrollView;
+    Button track;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +51,18 @@ public class dashboard extends AppCompatActivity {
         scrollView = findViewById(R.id.scrollStats);
         pieChart = findViewById(R.id.pieChart);
 
+        track = findViewById(R.id.track);
+
 
         //Function to fetch data from the Rest API
         fetchData();
 
-
+        track.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(dashboard.this , AffectedCountries.class));
+            }
+        });
     }
 
 

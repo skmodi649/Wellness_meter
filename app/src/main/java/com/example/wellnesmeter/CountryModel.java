@@ -1,7 +1,7 @@
 package com.example.wellnesmeter;
 
 public class CountryModel {
-    private String flag,country,cases,todayCases,deaths,todayDeaths,recovered,activeCases,critical,population,continent;
+    private String country,cases,todayCases,deaths,todayDeaths,recovered,activeCases,critical,population,continent;
 
     // Default constructor
     public CountryModel() {
@@ -9,8 +9,7 @@ public class CountryModel {
     }
 
     // Parameterised constructor
-    public CountryModel(String flag, String country, String cases, String todayCases, String deaths, String todayDeaths, String recovered, String activeCases, String critical, String population, String continent) {
-        this.flag = flag;
+    public CountryModel(String country, String cases, String todayCases, String deaths, String todayDeaths, String recovered, String activeCases, String critical, String population, String continent) {
         this.country = country;
         this.cases = cases;
         this.todayCases = todayCases;
@@ -21,14 +20,6 @@ public class CountryModel {
         this.critical = critical;
         this.population = population;
         this.continent = continent;
-    }
-
-    public String getFlag() {
-        return flag;
-    }
-
-    public void setFlag(String flag) {
-        this.flag = flag;
     }
 
     public String getCountry() {
