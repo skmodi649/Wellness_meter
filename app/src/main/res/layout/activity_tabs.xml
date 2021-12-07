@@ -4,60 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rect"
+    android:background="#2C272E"
     tools:context=".Tabs_activity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/heal"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:padding="25dp"
         android:text="@string/health_index"
         android:textColor="#040404"
+        android:textSize="16sp"
         app:backgroundTint="#15CDB8"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/aqi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513" />
+        app:layout_constraintTop_toBottomOf="@+id/covid" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/aqi"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="16dp"
+        android:padding="25dp"
         android:text="@string/go_to_our_website"
         android:textColor="#040404"
+        android:textSize="16sp"
         app:backgroundTint="#15CDB8"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintTop_toBottomOf="@+id/heal" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/covid"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:padding="25dp"
         android:text="@string/covid_19_dashboard"
         android:textColor="#040404"
+        android:textSize="16sp"
         app:backgroundTint="#15CDB8"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/heal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:contentDescription="@string/tabsimage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/tabsimage"
+        app:layout_constraintBottom_toTopOf="@+id/covid"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031"
+        app:layout_constraintVertical_bias="0.036"
         app:srcCompat="@drawable/log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
