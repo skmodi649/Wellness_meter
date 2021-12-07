@@ -26,7 +26,8 @@
         app:layout_constraintVertical_bias="0.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/meter1" />
+        app:lottie_rawRes="@raw/meter1"
+        tools:ignore="MissingClass" />
 
     <EditText
         android:id="@+id/username"
