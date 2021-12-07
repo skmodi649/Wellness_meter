@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Tabs_activity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Tabs_activity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +20,7 @@ public class Tabs_activity extends AppCompatActivity {
         Button hic = findViewById(R.id.heal);
         Button aqi = findViewById(R.id.aqi);
         Button covid = findViewById(R.id.covid);
+        mAuth = FirebaseAuth.getInstance();
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));
         covid.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , dashboard.class)));
@@ -30,4 +33,13 @@ public class Tabs_activity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser() == null) {
+            startActivity(new Intent(Tabs_activity.this, MainActivity.class));
+            finish();
+        }
+    }
+
 }
