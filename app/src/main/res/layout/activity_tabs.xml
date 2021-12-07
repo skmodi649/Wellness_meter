@@ -25,7 +25,7 @@
         android:id="@+id/aqi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/air_quality_index"
+        android:text="Go to our website"
         android:textColor="#040404"
         app:backgroundTint="#15CDB8"
         app:layout_constraintBottom_toBottomOf="parent"
