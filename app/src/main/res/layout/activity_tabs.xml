@@ -25,7 +25,7 @@
         android:id="@+id/aqi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to our website"
+        android:text="@string/go_to_our_website"
         android:textColor="#040404"
         app:backgroundTint="#15CDB8"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,6 +50,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
+        android:contentDescription="@string/tabsimage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

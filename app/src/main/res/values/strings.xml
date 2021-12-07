@@ -56,5 +56,7 @@
     <string name="air_quality_index">Air Quality Index</string>
     <string name="covid_19_dashboard">Covid 19 Dashboard</string>
     <string name="enter_calcium_level">enter_calcium_level</string>
+    <string name="go_to_our_website">Go to our website</string>
+    <string name="tabsimage">tabsimage</string>
 
 </resources>
