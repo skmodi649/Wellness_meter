@@ -27,19 +27,19 @@ public class Tabs_activity extends AppCompatActivity {
         aqi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri uri = Uri.parse("https://nodejs-health-index-calculator.herokuapp.com/"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse("https://health-index-calculator.herokuapp.com/"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
     }
-    /** @Override
+     @Override
     protected void onStart() {
         super.onStart();
         if (mAuth.getCurrentUser() == null) {
             startActivity(new Intent(Tabs_activity.this, MainActivity.class));
             finish();
         }
-    } */
+    }
 
 }
