@@ -33,13 +33,13 @@ public class Tabs_activity extends AppCompatActivity {
             }
         });
     }
-    @Override
+    /** @Override
     protected void onStart() {
         super.onStart();
         if (mAuth.getCurrentUser() == null) {
             startActivity(new Intent(Tabs_activity.this, MainActivity.class));
             finish();
         }
-    }
+    } */
 
 }
