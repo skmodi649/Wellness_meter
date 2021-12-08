@@ -5,7 +5,7 @@
     android:id="@+id/progress"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C272E"
+    android:background="@color/teal_700"
     tools:context=".RegisterUser">
 
     <EditText
@@ -18,10 +18,10 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:textColor="#000000"
-        android:textColorHint="#A596E3"
+        android:textColorHint="#16084E"
         app:layout_constraintBottom_toTopOf="@+id/age"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
@@ -37,7 +37,7 @@
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="#000000"
-        android:textColorHint="#A596E3"
+        android:textColorHint="#FF16084E"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -55,7 +55,7 @@
         android:inputType="text"
         android:minHeight="48dp"
         android:textColor="#000000"
-        android:textColorHint="#A596E3"
+        android:textColorHint="#FF16084E"
         app:layout_constraintBottom_toTopOf="@+id/pass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -71,7 +71,7 @@
         android:hint="@string/password"
         android:minHeight="48dp"
         android:textColor="#000000"
-        android:textColorHint="#A596E3"
+        android:textColorHint="#FF16084E"
         app:layout_constraintBottom_toTopOf="@+id/reg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -105,6 +105,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="121dp"
+        android:layout_height="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/log" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
