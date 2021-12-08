@@ -67,6 +67,6 @@ public class ResultActivity extends AppCompatActivity {
         result_cholesterol.setText(cholesteroldata);
 
         home = findViewById(R.id.profhome);
-        home.setOnClickListener(view -> startActivity(new Intent(ResultActivity.this , InputActivity.class)));
+        home.setOnClickListener(view -> startActivity(new Intent(ResultActivity.this , Tabs_activity.class)));
     }
 }
