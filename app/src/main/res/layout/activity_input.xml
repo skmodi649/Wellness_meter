@@ -46,7 +46,7 @@
         android:id="@+id/bmires"
         android:layout_width="248dp"
         android:layout_height="89dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="184dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:minHeight="48dp"
@@ -88,7 +88,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintVertical_bias="0.679" />
 
     <Button
         android:id="@+id/health"
