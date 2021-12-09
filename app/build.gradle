@@ -50,7 +50,5 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.leo.simplearcloader:simplearcloader:1.0.+'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
-
-    // Lottie Animation Dependency
     implementation 'com.airbnb.android:lottie:4.2.2'
 }

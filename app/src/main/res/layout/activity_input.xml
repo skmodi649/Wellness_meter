@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#03205A"
-    android:fitsSystemWindows="true"
     tools:context=".InputActivity">
 
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/mainAnimationa"
-        android:layout_width="363dp"
-        android:layout_height="222dp"
+        app:lottie_imageAssetsFolder="images"
+        android:id="@+id/mainAnimation"
+        android:layout_width="361dp"
+        android:layout_height="225dp"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="50dp"
         android:background="#03205A"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/wt"
@@ -29,8 +29,9 @@
         app:layout_constraintVertical_bias="0.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/calculator"
-        tools:ignore="MissingClass" />
+        app:lottie_rawRes="@raw/calculator"/>
+
+
 
     <EditText
         android:id="@+id/wt"
