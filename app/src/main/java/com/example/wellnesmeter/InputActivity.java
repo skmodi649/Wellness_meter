@@ -1,5 +1,6 @@
 package com.example.wellnesmeter;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -7,8 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+import com.bumptech.glide.Glide;
 
 public class InputActivity extends AppCompatActivity {
 
@@ -16,6 +18,7 @@ public class InputActivity extends AppCompatActivity {
     private EditText height;
     private TextView bmires;
     private TextView Message;
+    private ImageView imageView;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -27,9 +30,18 @@ public class InputActivity extends AppCompatActivity {
         height = findViewById(R.id.ht);
         bmires = findViewById(R.id.bmires);
         Button result = findViewById(R.id.calres);
+        imageView = findViewById(R.id.imageView);
         Message = findViewById(R.id.message);
         Button health = findViewById(R.id.health);
-        ImageButton logu = findViewById(R.id.logout);
+
+
+        Glide.with(this).load(R.raw.bmiae).into(imageView);
+
+
+
+
+
+
 
         result.setOnClickListener(view -> {
             double wt = Double.parseDouble(String.valueOf(weight.getText()));
@@ -52,7 +64,5 @@ public class InputActivity extends AppCompatActivity {
                     }
                 });
         health.setOnClickListener(view -> startActivity(new Intent(InputActivity.this , HealthIndexCalc.class)));
-
-        logu.setOnClickListener(view -> startActivity(new Intent(InputActivity.this , MainActivity.class)));
     }
 }

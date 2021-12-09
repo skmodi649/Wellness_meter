@@ -4,63 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03205A"
+    android:background="#FFFFFF"
     tools:context=".InputActivity">
 
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/mainAnimation"
-        android:layout_width="361dp"
-        android:layout_height="225dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="50dp"
-        android:background="#03205A"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/wt"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="508dp"
+        android:layout_height="377dp"
+        android:layout_marginBottom="336dp"
+        android:src="@raw/bmiae"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/bodymassindex"/>
-
-
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/wt"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="364dp"
+        android:layout_marginBottom="344dp"
         android:ems="10"
         android:hint="Enter the weight in Kg"
         android:inputType="numberDecimal"
-        android:textColor="#FFFFFF"
+        android:textColor="#1B1818"
         android:textColorHint="#93756A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/ht"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginBottom="296dp"
         android:ems="10"
         android:hint="Enter the height in m"
         android:inputType="numberDecimal"
-        android:textColor="#FFFFFF"
+        android:textColor="#FF1B1818"
         android:textColorHint="#93756A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -68,16 +55,16 @@
         android:id="@+id/bmires"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="204dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:minHeight="48dp"
-        android:textColor="#CAB83D"
+        android:textColor="#650555"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -85,11 +72,10 @@
         android:id="@+id/calres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
         android:text="@string/calculate"
         android:textSize="12sp"
         app:backgroundTint="#73347A"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/health"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,21 +88,21 @@
         android:layout_marginBottom="64dp"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:textColor="#57FF00"
+        android:textColor="#1F09EA"
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintVertical_bias="0.88" />
 
     <Button
         android:id="@+id/health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="4dp"
         android:alpha="1"
         android:text="@string/health_index_calculator"
         android:textSize="12sp"
@@ -125,18 +111,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_power_off"
-        app:tint="#000000"
-        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
