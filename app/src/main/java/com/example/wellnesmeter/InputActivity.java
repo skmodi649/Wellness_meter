@@ -1,6 +1,4 @@
 package com.example.wellnesmeter;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
