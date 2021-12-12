@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="508dp"
         android:layout_height="377dp"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="325dp"
         android:src="@raw/bmiae"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
