@@ -89,7 +89,7 @@
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="170dp"
         android:ems="10"
         android:gravity="center_horizontal"
         android:textColor="#1F09EA"
