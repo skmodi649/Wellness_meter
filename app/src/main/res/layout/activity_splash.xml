@@ -24,8 +24,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="133dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/poppins"
         android:text="Wellness Meter"
