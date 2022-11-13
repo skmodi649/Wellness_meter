@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "168529452328",
-    "project_id": "auth-f8b68",
-    "storage_bucket": "auth-f8b68.appspot.com"
+    "project_number": "328177159489",
+    "project_id": "wellness-meter",
+    "storage_bucket": "wellness-meter.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:168529452328:android:967783693ac9d20b83441d",
+        "mobilesdk_app_id": "1:328177159489:android:073a9744d2522c19fc25c0",
         "android_client_info": {
           "package_name": "com.example.wellnesmeter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "168529452328-lpdamjil6g6a1p91pfe70sbk2tg7bokv.apps.googleusercontent.com",
+          "client_id": "328177159489-d486fu9gkvrtmbn8j2gku0mld96pj71d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBvmwP_9GJAoO0Fb_9_F-jCLGXYSgUe6rU"
+          "current_key": "AIzaSyCmOs9t1U9fbehs_1XXm5ai-VNG1SSZ538"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "168529452328-lpdamjil6g6a1p91pfe70sbk2tg7bokv.apps.googleusercontent.com",
+              "client_id": "328177159489-d486fu9gkvrtmbn8j2gku0mld96pj71d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

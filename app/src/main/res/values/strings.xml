@@ -48,6 +48,7 @@
     <string name="enter_systolic_blood_pressure">Enter Systolic blood pressure</string>
     <string name="enter_systolic_bp">Enter systolic BP</string>
     <string name="enter_diastolic_bp">Enter diastolic BP</string>
+    <string name="health_History">Health History</string>
     <string name="health_index_button">Health Index</string>
     <string name="version_1_0">Version : 1.0</string>
     <string name="note">**Note : The Health Index percentage generated is totally based upon the data entered by the user . Users are adviced not to take it as the final verdict of their health\'s status, consulting professionals is always recommended.</string>

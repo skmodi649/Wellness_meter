@@ -24,15 +24,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="127dp"
-        android:layout_height="133dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="256dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="64dp"
         android:fontFamily="@font/poppins"
+        android:gravity="center"
         android:text="Wellness Meter"
         android:textColor="@android:color/white"
-        android:textSize="48sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
 

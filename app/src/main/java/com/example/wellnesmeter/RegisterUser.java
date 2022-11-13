@@ -18,10 +18,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
     private EditText fullname , age , email , password;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
