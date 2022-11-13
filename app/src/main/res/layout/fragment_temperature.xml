@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/white"
     tools:context=".temperature">
 
     <TextView
@@ -13,25 +13,41 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-black"
-        android:text="Body Temperature Analysis"
-        android:textColor="#190101"
+        android:text="Line Graph"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardVeiwgraph"
+        android:background="@color/black"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="220dp"
         android:layout_marginLeft="20dp"
         app:cardElevation="20dp"
         app:cardCornerRadius="5dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp">
+
 
         <com.jjoe64.graphview.GraphView
             android:layout_width="match_parent"
+            android:background="@color/teal_200"
             android:layout_height="match_parent"
             android:id="@+id/graph" />
 
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardVeiwgraph2"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginLeft="20dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginRight="20dp">
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
