@@ -21,12 +21,12 @@ public class Tabs_activity extends AppCompatActivity {
 
         Button hic = findViewById(R.id.heal);
         Button aqi = findViewById(R.id.aqi);
-        Button covid = findViewById(R.id.covid);
+        Button health_history = findViewById(R.id.health_history);
         imageButton = findViewById(R.id.imageButton);
         mAuth = FirebaseAuth.getInstance();
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));
-        covid.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , dashboard.class)));
+        health_history.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , com.example.wellnesmeter.health_history.class)));
         aqi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

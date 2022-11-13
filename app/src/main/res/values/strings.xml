@@ -59,5 +59,8 @@
     <string name="enter_calcium_level">enter_calcium_level</string>
     <string name="go_to_our_website">Go to our website</string>
     <string name="tabsimage">tabsimage</string>
+    <string name="title_activity_health_history">health_history</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
 </resources>
