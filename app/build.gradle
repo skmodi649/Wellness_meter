@@ -41,6 +41,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'com.google.firebase:firebase-auth:21.0.8'
+    implementation 'com.jjoe64:graphview:4.2.1'
     implementation 'com.google.firebase:firebase-database:20.0.2'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'

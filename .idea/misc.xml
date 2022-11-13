@@ -15,7 +15,7 @@
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_about_us.xml" value="0.1" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_affected_countries.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_conditions.xml" value="0.264" />
-        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_dashboard.xml" value="0.536" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_detail.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_health_history.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_health_index_calc.xml" value="0.264" />
@@ -31,7 +31,9 @@
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_termsandconditions.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/bmi_activity.xml" value="0.264" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/content_scrolling.xml" value="0.264" />
-        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_temperature.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_blood_pressure.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_pulse.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_temperature.xml" value="0.264" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/list_custom_item.xml" value="0.20108695652173914" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/menu/menu_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
