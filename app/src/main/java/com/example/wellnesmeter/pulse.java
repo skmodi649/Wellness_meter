@@ -1,5 +1,7 @@
 package com.example.wellnesmeter;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
@@ -39,6 +47,21 @@ public class pulse extends Fragment {
     private String mParam2;
 
     Random r;
+
+    // variable for our bar chart
+    BarChart barChart;
+
+    // variable for our bar data.
+    BarData barData;
+
+    // variable for our bar data set.
+    BarDataSet barDataSet;
+
+    // array list for storing entries.
+    ArrayList barEntriesArrayList;
+
+    // Floating action bar button
+    FloatingActionButton fab;
 
     public pulse() {
         // Required empty public constructor
@@ -132,6 +155,54 @@ public class pulse extends Fragment {
                 new DataPoint(4, healthSampleList.get(3).getPulse())
         });
         graph.addSeries(series);
+
+
+        barChart = (BarChart)view.findViewById(R.id.BarChart);
+
+        // creating a new array list
+        barEntriesArrayList = new ArrayList<>();
+
+        // adding new entry to our array list with bar
+        // entry and passing x and y axis value to it.
+        barEntriesArrayList.add(new BarEntry(1f, healthSampleList.get(0).getPulse()));
+        barEntriesArrayList.add(new BarEntry(2f, healthSampleList.get(1).getPulse()));
+        barEntriesArrayList.add(new BarEntry(3f, healthSampleList.get(2).getPulse()));
+        barEntriesArrayList.add(new BarEntry(4f, healthSampleList.get(3).getPulse()));
+
+
+        // creating a new bar data set.
+        barDataSet = new BarDataSet(barEntriesArrayList, "Pulse Rate");
+
+        // creating a new bar data and
+        // passing our bar data set.
+        barData = new BarData(barDataSet);
+
+        // below line is to set data
+        // to our bar chart.
+        barChart.setData(barData);
+        // adding color to our bar data set.
+        barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
+
+        // setting text color.
+        barDataSet.setValueTextColor(Color.BLACK);
+
+        // setting text size
+        barDataSet.setValueTextSize(16f);
+        barChart.getDescription().setEnabled(false);
+
+
+
+        // Floating action button
+        fab = (FloatingActionButton) view.findViewById(R.id.add_fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), overview.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }

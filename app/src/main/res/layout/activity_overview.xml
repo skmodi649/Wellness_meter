@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".overview">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Monday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: High"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: High"/>
+
+                <Button
+                    android:id="@+id/consult1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Tuesday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: Low"/>
+
+                <Button
+                    android:id="@+id/consult2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Wednesday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: Normal"/>
+
+                <Button
+                    android:id="@+id/consult3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Thursday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: High"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: Low"/>
+
+                <Button
+                    android:id="@+id/consult4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Friday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: High"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: High"/>
+
+                <Button
+                    android:id="@+id/consult5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Saturday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: High"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: Normal"/>
+
+                <Button
+                    android:id="@+id/consult6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:text="Sunday"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="1. Body Temperature: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="2. Pulse Rate: Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:text="3. Blood Pressure: Low"/>
+
+                <Button
+                    android:id="@+id/consult7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="105dp"
+                    android:text="Consult Doctor" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

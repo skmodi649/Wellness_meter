@@ -1,5 +1,6 @@
 package com.example.wellnesmeter;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
@@ -58,6 +60,10 @@ public class temperature extends Fragment {
     // array list for storing entries.
     ArrayList barEntriesArrayList;
 
+
+    // Floating action bar button
+    FloatingActionButton fab;
+
     public temperature() {
         // Required empty public constructor
     }
@@ -89,10 +95,6 @@ public class temperature extends Fragment {
         }
         r = new Random();
         readHealthData();
-
-
-
-
     }
 
     private List<HealthSample> healthSampleList = new ArrayList<>();
@@ -191,6 +193,19 @@ public class temperature extends Fragment {
         // setting text size
         barDataSet.setValueTextSize(16f);
         barChart.getDescription().setEnabled(false);
+
+
+
+        // Floating action button
+        fab = (FloatingActionButton) view.findViewById(R.id.add_fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), overview.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
