@@ -16,38 +16,18 @@
         android:layout_marginLeft="60dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
         android:padding="25dp"
         android:text="@string/health_index"
         android:textColor="#FFEDE5E5"
         android:textSize="16sp"
         app:backgroundTint="#FF0D398F"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/aqi"
+        app:layout_constraintBottom_toTopOf="@+id/health_history"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/health_history" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/aqi"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="16dp"
-        android:padding="25dp"
-        android:text="@string/go_to_our_website"
-        android:textColor="#FFEDE5E5"
-        android:textSize="16sp"
-        app:backgroundTint="#FF0D398F"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/health_history"
@@ -57,42 +37,19 @@
         android:layout_marginLeft="60dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
+        android:layout_marginBottom="62dp"
         android:padding="25dp"
         android:text="@string/health_History"
         android:textColor="#EDE5E5"
         android:textSize="16sp"
         app:backgroundTint="#0D398F"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/heal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/tabsimage"
-        app:layout_constraintBottom_toTopOf="@+id/health_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036"
-        app:srcCompat="@drawable/log" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="36dp"
-        android:layout_height="48dp"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_power_off"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/heal" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
