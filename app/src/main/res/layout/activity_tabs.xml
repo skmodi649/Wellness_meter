@@ -1,55 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rect"
-    android:visibility="visible"
     tools:context=".Tabs_activity">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/heal"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="20dp"
-        android:padding="25dp"
-        android:text="@string/health_index"
-        android:textColor="#FFEDE5E5"
-        android:textSize="16sp"
-        app:backgroundTint="#FF0D398F"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/health_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"
+        tools:layout_editor_absoluteX="528dp"
+        tools:layout_editor_absoluteY="0dp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/health_history"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="62dp"
-        android:padding="25dp"
-        android:text="@string/health_History"
-        android:textColor="#EDE5E5"
-        android:textSize="16sp"
-        app:backgroundTint="#0D398F"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60"
+        tools:layout_editor_absoluteX="324dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40"
+        tools:layout_editor_absoluteX="276dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="41dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <Button
+        android:id="@+id/score"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Wellness Score"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMiddle"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heal" />
+        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline5"/>
 
+    <Button
+        android:id="@+id/sensing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Real Time Sensing"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMiddle"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"/>
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Health History"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+        app:layout_constraintRight_toLeftOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMiddle"/>
+
+    <Button
+        android:id="@+id/experts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Experts"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMiddle"/>
+
+    <Button
+        android:id="@+id/buttonMiddle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline5"
+        app:layout_constraintRight_toLeftOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
