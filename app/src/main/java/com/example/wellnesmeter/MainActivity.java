@@ -36,10 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button signin = findViewById(R.id.login);
         signin.setOnClickListener(this);
 
-        Button about = findViewById(R.id.about);
-        about.setOnClickListener(this);
-
-                editTextEmail = findViewById(R.id.username);
+        editTextEmail = findViewById(R.id.username);
         editTextPassword = findViewById(R.id.password);
 
         progressBar = findViewById(R.id.progressBar);  //initialising the progress bar
@@ -60,9 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.login:
                 userLogin();
                 break;
-
-            case R.id.about:
-                startActivity(new Intent(MainActivity.this , AboutUsActivity.class));
         }
     }
 
@@ -105,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     assert user != null;
                     if (user.isEmailVerified()) {
                         // redirect to user profile
-                        startActivity(new Intent(MainActivity.this,TermsAndConditions.class));
+                        startActivity(new Intent(MainActivity.this,Tabs_activity.class));
                     } else {
                         user.sendEmailVerification();
                         Toast.makeText(MainActivity.this, "Check your email to verify your account!", Toast.LENGTH_LONG).show();

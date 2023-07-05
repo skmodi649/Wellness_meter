@@ -1,12 +1,10 @@
 package com.example.wellnesmeter;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.widget.Button;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.lang.String;
@@ -14,7 +12,6 @@ import java.lang.String;
 
 public class HealthIndexCalc extends AppCompatActivity {
     Button calculate;
-    ImageButton logu;
     EditText age;
     EditText bmi;
     EditText pulse;
@@ -34,9 +31,7 @@ public class HealthIndexCalc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_index_calc);
 
-
         calculate = findViewById(R.id.score);
-        logu = findViewById(R.id.loguhealth);
         bmi = findViewById(R.id.hicbmi);
         pulse = findViewById(R.id.hicpulse);
         bp = findViewById(R.id.hicbp);
@@ -50,7 +45,6 @@ public class HealthIndexCalc extends AppCompatActivity {
         totalscore = 0.0;
 
 
-                logu.setOnClickListener(view -> startActivity(new Intent(HealthIndexCalc.this, MainActivity.class)));
 
                 calculate.setOnClickListener(view -> {
                     double totbmi = BMI();

@@ -40,7 +40,7 @@ public class bmiActivity extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(bmiActivity.this, HealthIndexCalc.class));
+                startActivity(new Intent(bmiActivity.this, TermsAndConditions.class));
             }
         });
     }

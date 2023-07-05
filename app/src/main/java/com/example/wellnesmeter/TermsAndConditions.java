@@ -13,10 +13,8 @@ public class TermsAndConditions extends AppCompatActivity implements View.OnClic
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conditions);
-        Button button = findViewById(R.id.agree);
-        Button button1 = findViewById(R.id.decline);
-        button.setOnClickListener(this);
-        button1.setOnClickListener(this);
+        Button ok = findViewById(R.id.agree);
+        ok.setOnClickListener(this);
 
     }
     @SuppressLint("NonConstantResourceId")
@@ -26,11 +24,7 @@ public class TermsAndConditions extends AppCompatActivity implements View.OnClic
         switch (view.getId())
         {
             case R.id.agree:
-                startActivity(new Intent(TermsAndConditions.this , Tabs_activity.class));
-                break;
-
-            case R.id.decline:
-                startActivity(new Intent(TermsAndConditions.this , MainActivity.class));
+                startActivity(new Intent(TermsAndConditions.this , HealthIndexCalc.class));
                 break;
         }
     }
