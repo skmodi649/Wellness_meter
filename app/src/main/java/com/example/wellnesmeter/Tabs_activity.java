@@ -18,8 +18,8 @@ public class Tabs_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
 
-        Button hic = findViewById(R.id.score);
-        Button health_history = findViewById(R.id.sensing);
+        ImageButton hic = findViewById(R.id.score);
+        ImageButton health_history = findViewById(R.id.sensing);
         mAuth = FirebaseAuth.getInstance();
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));

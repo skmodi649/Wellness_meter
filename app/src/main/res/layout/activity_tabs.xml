@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Tabs_activity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -48,44 +49,63 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.4"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/score"
+        android:scaleType="fitCenter"
+        android:padding="20dp"
         android:layout_width="0dp"
+
+        android:elevation="10dp"
         android:layout_height="0dp"
-        android:text="Wellness Score"
+        android:src="@drawable/wscore"
         app:layout_constraintBottom_toTopOf="@+id/buttonMiddle"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline3"
         app:layout_constraintRight_toLeftOf="@+id/guideline5"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/sensing"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Real Time Sensing"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+
+
+        android:elevation="10dp"
+        android:src="@drawable/sensing"
         app:layout_constraintBottom_toTopOf="@+id/buttonMiddle"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline4"
         app:layout_constraintRight_toLeftOf="@+id/guideline"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/history"
         android:layout_width="0dp"
+        android:src="@drawable/history"
         android:layout_height="0dp"
-        android:text="Health History"
+        android:scaleType="fitCenter"
+
+        android:elevation="10dp"
+
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline3"
         app:layout_constraintRight_toLeftOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/buttonMiddle"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/experts"
+        android:padding="20dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Experts"
+        android:src="@drawable/doctor"
+
+        android:elevation="10dp"
+
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline4"
