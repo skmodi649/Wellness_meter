@@ -44,9 +44,13 @@ public class InputActivity extends AppCompatActivity {
 
             double bmi = wt / (ht*ht);
             bmi = Math.round(bmi*100.0)/100.0;    // Rounding off the bmi value to two decimal places
-            String res = Double.toString(bmi);
 
-
+            String value = Double.toString(bmi);
+            Bundle bundle = new Bundle();
+            bundle.putString("value",value);
+            Intent intent = new Intent(InputActivity.this, bmiActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
             if(bmi < 18.50){
                 Message.setText("Underweight!");}
             else if(bmi >= 18.50 && bmi <= 24.9){

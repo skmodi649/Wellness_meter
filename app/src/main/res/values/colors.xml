@@ -28,4 +28,8 @@
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
 
+    <color name="trans">#00000000</color>
+    <color name="warn">#FF1313</color>
+    <color name="halfwarn">#483FC8</color>
+
 </resources>
