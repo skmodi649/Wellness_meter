@@ -51,15 +51,6 @@ public class InputActivity extends AppCompatActivity {
             Intent intent = new Intent(InputActivity.this, bmiActivity.class);
             intent.putExtras(bundle);
             startActivity(intent);
-            if(bmi < 18.50){
-                Message.setText("Underweight!");}
-            else if(bmi >= 18.50 && bmi <= 24.9){
-                Message.setText("Normal!");}
-               else if(bmi >= 25 && bmi <= 29.9) {
-                    Message.setText("Overweight!");}
-                    else {
-                        Message.setText("Obese!");
-                    }
                 });
     }
 }
