@@ -14,7 +14,6 @@ public class InputActivity extends AppCompatActivity {
 
     private EditText weight;
     private EditText height;
-    private TextView bmires;
     private TextView Message;
     private ImageView imageView;
 
@@ -26,11 +25,9 @@ public class InputActivity extends AppCompatActivity {
 
         weight = findViewById(R.id.wt);
         height = findViewById(R.id.ht);
-        bmires = findViewById(R.id.bmires);
         Button result = findViewById(R.id.calres);
         imageView = findViewById(R.id.imageView);
         Message = findViewById(R.id.message);
-        Button health = findViewById(R.id.health);
 
 
         Glide.with(this).load(R.raw.bmiae).into(imageView);
@@ -49,7 +46,6 @@ public class InputActivity extends AppCompatActivity {
             bmi = Math.round(bmi*100.0)/100.0;    // Rounding off the bmi value to two decimal places
             String res = Double.toString(bmi);
 
-            bmires.setText(res);
 
             if(bmi < 18.50){
                 Message.setText("Underweight!");}
@@ -61,6 +57,5 @@ public class InputActivity extends AppCompatActivity {
                         Message.setText("Obese!");
                     }
                 });
-        health.setOnClickListener(view -> startActivity(new Intent(InputActivity.this , HealthIndexCalc.class)));
     }
 }

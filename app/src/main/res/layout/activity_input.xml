@@ -4,26 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".InputActivity">
+    android:background="#FFFFFF">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="508dp"
         android:layout_height="377dp"
-        android:layout_marginBottom="320dp"
         android:src="@raw/bmiae"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/wt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 
     <EditText
         android:id="@+id/wt"
-        android:layout_width="172dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="344dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Weight in Kg"
@@ -31,17 +30,17 @@
         android:minHeight="48dp"
         android:textColor="#1B1818"
         android:textColorHint="#93756A"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ht"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/ht"
-        android:layout_width="172dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="344dp"
+        android:layout_marginBottom="108dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Height in m"
@@ -51,24 +50,7 @@
         android:textColorHint="#93756A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/bmires"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="270dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:minHeight="48dp"
-        android:textColor="#650555"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -79,52 +61,24 @@
         android:text="@string/calculate"
         android:textSize="12sp"
         app:backgroundTint="#73347A"
-        app:layout_constraintBottom_toTopOf="@+id/health"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ht"
+        app:layout_constraintVertical_bias="0.742"
         tools:ignore="SmallSp" />
-
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="170dp"
-        android:ems="10"
-        android:gravity="center_horizontal"
-        android:textColor="#1F09EA"
-        android:textSize="34sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88" />
-
-    <Button
-        android:id="@+id/health"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:alpha="1"
-        android:text="@string/health_index_calculator"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:backgroundTint="#F17864"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="BMI Calculator"
+        android:fontFamily="cursive"
+        android:layout_marginTop="20dp"
+        android:text="Let's start with bmi calculation"
         android:textAllCaps="true"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
