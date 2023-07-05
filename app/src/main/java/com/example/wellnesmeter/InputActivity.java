@@ -28,16 +28,7 @@ public class InputActivity extends AppCompatActivity {
         Button result = findViewById(R.id.calres);
         imageView = findViewById(R.id.imageView);
         Message = findViewById(R.id.message);
-
-
         Glide.with(this).load(R.raw.bmiae).into(imageView);
-
-
-
-
-
-
-
         result.setOnClickListener(view -> {
             double wt = Double.parseDouble(String.valueOf(weight.getText()));
             double ht = Double.parseDouble(String.valueOf(height.getText()));
