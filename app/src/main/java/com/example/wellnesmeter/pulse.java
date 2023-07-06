@@ -59,10 +59,6 @@ public class pulse extends Fragment {
 
     // array list for storing entries.
     ArrayList barEntriesArrayList;
-
-    // Floating action bar button
-    FloatingActionButton fab;
-
     public pulse() {
         // Required empty public constructor
     }
@@ -189,19 +185,6 @@ public class pulse extends Fragment {
         // setting text size
         barDataSet.setValueTextSize(16f);
         barChart.getDescription().setEnabled(false);
-
-
-
-        // Floating action button
-        fab = (FloatingActionButton) view.findViewById(R.id.add_fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), overview.class);
-                startActivity(intent);
-            }
-        });
 
         return view;
     }

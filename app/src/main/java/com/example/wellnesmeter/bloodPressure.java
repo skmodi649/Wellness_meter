@@ -42,8 +42,6 @@ public class bloodPressure extends Fragment {
 
     Random r;
 
-    // Floating action bar button
-    FloatingActionButton fab;
 
     public bloodPressure() {
         // Required empty public constructor
@@ -151,17 +149,6 @@ public class bloodPressure extends Fragment {
                 new DataPoint(4, healthSampleList.get(3).getSyst())
         });
         sys.addSeries(series1);
-
-        // Floating action button
-        fab = (FloatingActionButton) view.findViewById(R.id.add_fab);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), overview.class);
-                startActivity(intent);
-            }
-        });
 
         return view;
     }

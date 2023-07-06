@@ -57,26 +57,5 @@
 
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/cardVeiwgraph2"
-        android:layout_alignLeft="@+id/cardVeiwgraph2"
-        android:layout_alignTop="@+id/cardVeiwgraph2"
-        android:layout_alignEnd="@+id/cardVeiwgraph2"
-        android:layout_alignRight="@+id/cardVeiwgraph2"
-        android:layout_alignBottom="@+id/cardVeiwgraph2"
-        android:layout_gravity="end"
-        android:layout_marginStart="157dp"
-        android:layout_marginLeft="157dp"
-        android:layout_marginTop="257dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginRight="158dp"
-        android:layout_marginBottom="-93dp"
-        android:src="@drawable/ic_baseline_double_arrow_24"
-        app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+
 </RelativeLayout>

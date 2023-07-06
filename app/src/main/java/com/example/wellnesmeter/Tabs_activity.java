@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Tabs_activity extends AppCompatActivity {
@@ -19,11 +20,23 @@ public class Tabs_activity extends AppCompatActivity {
         setContentView(R.layout.activity_tabs);
 
         ImageButton hic = findViewById(R.id.score);
-        ImageButton health_history = findViewById(R.id.sensing);
+        ImageButton health_sensing = findViewById(R.id.sensing);
+        ImageButton history = findViewById(R.id.history);
         mAuth = FirebaseAuth.getInstance();
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));
-        health_history.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , com.example.wellnesmeter.health_history.class)));
+        health_sensing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Tabs_activity.this, sensingActivity.class));
+            }
+        });
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Tabs_activity.this, health_history.class));
+            }
+        });
     }
      @Override
     protected void onStart() {
