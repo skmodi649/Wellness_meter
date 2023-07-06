@@ -13,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WellnesMeter">
         <activity
+            android:name=".tutorial.tutorial_bp"
+            android:exported="true" />
+        <activity
+            android:name=".tutorial.tutorial_temperature"
+            android:exported="true" />
+        <activity
+            android:name=".tutorial.tutorialpulse"
+            android:exported="true" />
+        <activity
+            android:name=".tutorial.tutorial_starting"
+            android:exported="true" />
+        <activity
             android:name=".sensingActivity"
             android:exported="true" />
         <activity
