@@ -24,6 +24,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     private EditText fullname , age , email , password;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
+    private TextView signin;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -39,7 +40,15 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         age = findViewById(R.id.age);
         email = findViewById(R.id.email);
         password = findViewById(R.id.pass);
+        signin = findViewById(R.id.signin);
         progressBar = findViewById(R.id.progressBar);
+
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterUser.this, MainActivity.class));
+            }
+        });
     }
 
 
@@ -50,6 +59,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             registerUser();
         }
     }
+
     private void registerUser()
     {
         String elecmail = email.getText().toString().trim();
