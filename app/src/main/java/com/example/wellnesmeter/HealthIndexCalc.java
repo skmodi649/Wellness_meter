@@ -67,7 +67,7 @@ public class HealthIndexCalc extends AppCompatActivity {
                         String scal = Double.toString(totcal);
                         String sresp = Double.toString(totresp);
                         String sbp = Double.toString(totbp);
-                        Intent myIntent = new Intent(HealthIndexCalc.this , ResultActivity.class);
+                        Intent myIntent = new Intent(HealthIndexCalc.this , improvedResult.class);
                         Bundle b = new Bundle();
                         b.putString("key" , scare);
                         b.putString("bmi" , sbmi);

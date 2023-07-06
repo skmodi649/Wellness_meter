@@ -3,11 +3,18 @@ package com.example.wellnesmeter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.view.View;
 import android.widget.Button;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.leo.simplearcloader.SimpleArcLoader;
+
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
 
 
 public class ResultActivity extends AppCompatActivity {
@@ -22,12 +29,18 @@ public class ResultActivity extends AppCompatActivity {
     TextView result_cholesterol;
     TextView result_calcium;
     Button home;
-
+    SimpleArcLoader simpleArcLoader;
+    PieChart pieChart;
+    ScrollView scrollView;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_dashboard);
+
+        simpleArcLoader = findViewById(R.id.loader);
+        scrollView = findViewById(R.id.scrollStats);
+        pieChart = findViewById(R.id.pieChart);
 
         result_score = findViewById(R.id.rescore);
         result_bmi = findViewById(R.id.disbmi);
@@ -65,6 +78,13 @@ public class ResultActivity extends AppCompatActivity {
         result_sugar.setText(sugardata);
         String cholesteroldata = b.getString("cholesterol");
         result_cholesterol.setText(cholesteroldata);
+
+        pieChart.addPieSlice(new PieModel("Overall Score", Integer.parseInt(percentstr), Color.parseColor("#FFA726")));
+        pieChart.startAnimation();
+
+        simpleArcLoader.stop();
+        simpleArcLoader.setVisibility(View.GONE);
+        scrollView.setVisibility(View.VISIBLE);
 
         home = findViewById(R.id.profhome);
         home.setOnClickListener(view -> startActivity(new Intent(ResultActivity.this , Tabs_activity.class)));
