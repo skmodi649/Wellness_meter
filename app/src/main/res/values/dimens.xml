@@ -15,4 +15,6 @@
     <dimen name="loginViewsMargin">20dp</dimen>
 
     <dimen name="signup_text_margin_top">10dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
 </resources>

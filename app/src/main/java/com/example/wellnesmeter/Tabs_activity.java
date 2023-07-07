@@ -16,7 +16,7 @@ public class Tabs_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tabs);
+        setContentView(R.layout.activity_maintab);
 
         ImageButton hic = findViewById(R.id.score);
         ImageButton health_sensing = findViewById(R.id.sensing);

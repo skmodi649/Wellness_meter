@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dee9f4"
+    tools:context=".Tabs_activity">
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting" />
+
+    <TextView
+        android:id="@+id/explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Explore"
+        android:textColor="#0a101a"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore">
+
+
+        <ImageButton
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1.5"
+            android:layout_marginRight="5dp"
+            android:elevation="3dp"
+            android:backgroundTint="#e7d6f4"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/wscore"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/sensing"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1.5"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:elevation="3dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#ece1b6"
+            app:srcCompat="@drawable/sensing"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1.5"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:elevation="3dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#e7d6f4"
+            app:srcCompat="@drawable/history"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/experts"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1.5"
+            android:elevation="3dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="#ece1b6"
+            app:srcCompat="@drawable/doctor"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

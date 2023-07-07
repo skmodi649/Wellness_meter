@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WellnesMeter">
         <activity
+            android:name=".tabs.maintab"
+            android:exported="true" />
+        <activity
             android:name=".tutorial.noInternet"
             android:exported="true" />
         <activity
