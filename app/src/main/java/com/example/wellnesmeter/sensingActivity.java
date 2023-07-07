@@ -19,6 +19,6 @@ public class sensingActivity extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(sensingActivity.this, com.example.wellnesmeter.tutorial.noInternet.class));
             }
-        }, 7000);
+        }, 8000);
     }
 }
