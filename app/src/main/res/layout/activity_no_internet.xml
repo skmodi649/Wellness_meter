@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".tutorial.tutorial_starting">
+    tools:context=".tutorial.noInternet">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/mainAnimation"
-        android:layout_width="362dp"
-        android:layout_height="416dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
@@ -23,35 +22,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/lottiesetup"
+        app:lottie_rawRes="@raw/lottienoconnection"
         tools:ignore="MissingClass" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Let's set up the sensors!"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/next"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Couldn't connect to ESP8266 module!"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainAnimation" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/next"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:text="Next"
-        android:textColor="@color/black"
-        app:cornerRadius="10dp"
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="111dp"
+        android:text="Go Home"
         android:textSize="20sp"
-        android:backgroundTint="#ADD8E6"
+        app:cornerRadius="25dp"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
