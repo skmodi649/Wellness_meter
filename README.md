@@ -26,6 +26,13 @@ The android app:<br>
   <img src="https://github.com/skmodi649/Wellness_meter/assets/76468931/df3ab942-c239-488d-82d9-1f02fb51de14.png">
 </p>
 
+<p align="center">
+   <img src="https://github.com/skmodi649/Wellness_meter/assets/76468931/40bee4a8-23b4-4159-b28b-7647c4faf478.png">
+   <img src="https://github.com/skmodi649/Wellness_meter/assets/76468931/60f1d2f7-1f0f-47d2-a312-1cfc524bf2f3.png" align"left">
+</p>
+
+<img src="https://github.com/skmodi649/Wellness_meter/assets/76468931/a4073580-818b-4c28-8b46-edee7129cb5a.png">
+
 ## License
 
 This application is released under MIT License (see [LICENSE](LICENSE)).
