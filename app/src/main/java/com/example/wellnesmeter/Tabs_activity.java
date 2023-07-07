@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.wellnesmeter.tutorial.tutorial_starting;
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,9 +19,9 @@ public class Tabs_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maintab);
 
-        ImageButton hic = findViewById(R.id.score);
-        ImageButton health_sensing = findViewById(R.id.sensing);
-        ImageButton history = findViewById(R.id.history);
+        ImageView hic = findViewById(R.id.score);
+        ImageView health_sensing = findViewById(R.id.sensing);
+        ImageView history = findViewById(R.id.history);
         mAuth = FirebaseAuth.getInstance();
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));

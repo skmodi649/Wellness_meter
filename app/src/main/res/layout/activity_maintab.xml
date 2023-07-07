@@ -13,11 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="16dp"
-        android:fontFamily="sans-serif-black"
         android:text="Popular"
         android:textColor="#0a101a"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,11 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif-black"
         android:text="Explore"
         android:textColor="#0a101a"
-        android:textSize="35sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,55 +60,89 @@
         app:layout_constraintTop_toBottomOf="@+id/explore">
 
 
-        <ImageButton
-            android:id="@+id/score"
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginRight="5dp"
             android:layout_weight="1.5"
+            android:scaleType="fitCenter"
+            app:cardCornerRadius="20dp"
             android:backgroundTint="#e7d6f4"
-            android:elevation="3dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/wscore"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="80dp">
 
-        <ImageButton
-            android:id="@+id/sensing"
+            <ImageView
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/wscore"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_weight="1.5"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="20dp"
             android:backgroundTint="#ece1b6"
-            android:elevation="3dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/sensing"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="80dp">
 
-        <ImageButton
-            android:id="@+id/history"
+            <ImageView
+                android:id="@+id/sensing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/sensing"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:layout_weight="1.5"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="20dp"
             android:backgroundTint="#e7d6f4"
-            android:elevation="3dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/history"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_height="80dp">
 
-        <ImageButton
-            android:id="@+id/experts"
+            <ImageView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/history"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginLeft="5dp"
             android:layout_weight="1.5"
-            android:backgroundTint="#ece1b6"
-            android:elevation="3dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/doctor"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#e7d6f4"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/experts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/doctor"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <LinearLayout
@@ -141,6 +171,7 @@
                 app:cardCornerRadius="20dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardiology"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -185,6 +216,7 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exercise"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -236,6 +268,7 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dentistry"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -284,6 +317,7 @@
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/psychology"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
