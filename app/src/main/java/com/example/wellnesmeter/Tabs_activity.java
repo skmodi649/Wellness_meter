@@ -94,6 +94,7 @@ public class Tabs_activity extends AppCompatActivity {
         ImageView hic = findViewById(R.id.score);
         ImageView health_sensing = findViewById(R.id.sensing);
         ImageView history = findViewById(R.id.history);
+        ImageView experts = findViewById(R.id.experts);
         mAuth = FirebaseAuth.getInstance();
 
         hic.setOnClickListener(view -> startActivity(new Intent(Tabs_activity.this , InputActivity.class)));
@@ -148,6 +149,15 @@ public class Tabs_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Uri uri = Uri.parse("https://www.muscleandstrength.com/workout-routines");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        experts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.practo.com/doctors");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
