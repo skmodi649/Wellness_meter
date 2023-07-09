@@ -24,7 +24,7 @@
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_input.xml" value="0.264" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_input2.xml" value="0.264" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_login.xml" value="0.2" />
-        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_maintab.xml" value="0.2" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_maintab.xml" value="0.1" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_nav.xml" value="0.1" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_no_internet.xml" value="0.16052631578947368" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/activity_overview.xml" value="0.264" />
@@ -50,8 +50,10 @@
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_health_history.xml" value="0.2" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_pulse.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/fragment_temperature.xml" value="0.264" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/header_menu.xml" value="0.2" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/layout/list_custom_item.xml" value="0.20108695652173914" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
+        <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/menu/main_menu.xml" value="0.128" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/menu/menu_input.xml" value="0.152" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/menu/menu_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Surmo/AndroidStudioProjects/Wellnesmeter/app/src/main/res/menu/menu_termsandcondtions.xml" value="0.152" />
