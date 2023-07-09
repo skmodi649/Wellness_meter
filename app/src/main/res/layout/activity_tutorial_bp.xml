@@ -31,15 +31,30 @@
         android:layout_width="wrap_content"
         android:layout_height="105dp"
         android:layout_marginTop="16dp"
-        android:text="Setup the BP sensor!"
         android:gravity="center"
+        android:text="Setup the BP sensor!"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainAnimation" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tutorial"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#ADD8E6"
+        android:text="Tutorial"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/start"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.218"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/start"
@@ -52,8 +67,9 @@
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.218"
+        app:layout_constraintStart_toEndOf="@+id/tutorial"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

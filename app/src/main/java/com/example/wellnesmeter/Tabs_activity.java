@@ -50,8 +50,8 @@ public class Tabs_activity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 // Switch and case statements to be able to map buttons in navigation drawer to their respective actions
                 switch (item.getItemId()){
-                    case R.id.nav_home:
-                        Log.i("MENU_DRAWER_TAG", "Home item has been clicked!");
+                    case R.id.nav_help:
+                        Log.i("MENU_DRAWER_TAG", "Help item has been clicked!");
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 

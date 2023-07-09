@@ -4,9 +4,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:title="Home"
-            android:icon="@drawable/ic_baseline_home_24">
+            android:id="@+id/nav_help"
+            android:title="Help"
+            android:icon="@drawable/ic_baseline_help_24">
         </item>
 
         <item
@@ -17,13 +17,13 @@
 
         <item
             android:id="@+id/nav_users"
-            android:title="Users"
+            android:title="User"
             android:icon="@drawable/ic_baseline_supervised_user_circle_24">
         </item>
 
         <item
             android:id="@+id/nav_settings"
-            android:title="Home"
+            android:title="Settings"
             android:icon="@drawable/ic_baseline_settings_24">
         </item>
 

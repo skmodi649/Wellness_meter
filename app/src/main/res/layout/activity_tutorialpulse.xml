@@ -34,24 +34,41 @@
         android:text="Setup the Pulse sensor!"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainAnimation" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/next"
+        android:id="@+id/tutorial"
         android:layout_width="150dp"
         android:layout_height="70dp"
+        android:backgroundTint="#ADD8E6"
+        android:text="Tutorial"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nexta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.218"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nexta"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#ADD8E6"
         android:text="Next"
         android:textColor="@color/black"
-        app:cornerRadius="10dp"
         android:textSize="20sp"
-        android:backgroundTint="#ADD8E6"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.218"
+        app:layout_constraintStart_toEndOf="@+id/tutorial"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
