@@ -9,15 +9,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="508dp"
-        android:layout_height="377dp"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
         android:src="@raw/bmiae"
-        app:layout_constraintBottom_toTopOf="@+id/wt"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
 
     <EditText
         android:id="@+id/wt"
@@ -30,17 +29,16 @@
         android:minHeight="48dp"
         android:textColor="#1B1818"
         android:textColorHint="#93756A"
-        app:layout_constraintBottom_toTopOf="@+id/ht"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/ht"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Height in m"
@@ -48,25 +46,26 @@
         android:minHeight="48dp"
         android:textColor="#FF1B1818"
         android:textColorHint="#93756A"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wt"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/calres"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="@string/calculate"
-        android:textSize="12sp"
+        android:textSize="20sp"
         app:backgroundTint="#73347A"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ht"
-        app:layout_constraintVertical_bias="0.742"
+        app:layout_constraintVertical_bias="0.518"
         tools:ignore="SmallSp" />
 
     <TextView
