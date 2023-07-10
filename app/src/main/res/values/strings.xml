@@ -115,5 +115,6 @@
         (e) age > 19 and level more than 200 then score = normalised\n\n
 
     </string>
+    <string name="go_home">Go Home</string>
 
 </resources>

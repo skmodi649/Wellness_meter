@@ -47,6 +47,8 @@ public class Tabs_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maintab);
 
+        mAuth = FirebaseAuth.getInstance();
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigationView);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_Open,  R.string.menu_Close);
@@ -70,6 +72,9 @@ public class Tabs_activity extends AppCompatActivity {
 
                     case R.id.nav_logout:
                         Log.i("MENU_DRAWER_TAG", "Log out item has been clicked!");
+                        mAuth.signOut();
+                        Intent intent = new Intent(Tabs_activity.this, MainActivity.class);
+                        startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
@@ -82,6 +87,7 @@ public class Tabs_activity extends AppCompatActivity {
                     Log.i("MENU_DRAWER_TAG", "Users item has been clicked!");
                     drawerLayout.closeDrawer(GravityCompat.START);
                     break;
+
                 }
 
 

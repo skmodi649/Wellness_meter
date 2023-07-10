@@ -30,5 +30,5 @@
         android:textSize="20sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="John Atkins" />
+        android:text="Suraj Kumar" />
 </LinearLayout>

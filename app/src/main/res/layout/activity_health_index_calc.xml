@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha="1"
-    android:background="#2C262E"
+    android:background="#CF9FFF"
     tools:context=".HealthIndexCalc">
 
     <TextView
@@ -24,7 +24,7 @@
 
     <EditText
             android:id="@+id/hicbmi"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -44,7 +44,7 @@
 
         <EditText
             android:id="@+id/hicpulse"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -62,28 +62,28 @@
             app:layout_constraintTop_toBottomOf="@+id/hicbmi"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <EditText
-            android:id="@+id/hicbp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="124dp"
-            android:layout_marginLeft="124dp"
-            android:ems="10"
-            android:gravity="center_horizontal"
-            android:hint="@string/enter_systolic_bp"
-            android:textColorHint="@color/teal_700"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:textColor="@color/teal_200"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/hcibpa"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hicpulse" />
+    <EditText
+        android:id="@+id/hicbp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_systolic_bp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/teal_700"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hcibpa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hicpulse" />
 
         <EditText
             android:id="@+id/hicsugar"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -102,7 +102,7 @@
 
         <EditText
             android:id="@+id/hiccholesterol"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -121,7 +121,7 @@
 
         <EditText
             android:id="@+id/hicsodium"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -140,7 +140,7 @@
 
         <EditText
             android:id="@+id/hiccalcium"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -160,7 +160,7 @@
 
         <EditText
             android:id="@+id/hicresp"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="center_horizontal"
@@ -178,7 +178,7 @@
 
         <EditText
             android:id="@+id/hciage"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
@@ -195,24 +195,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <EditText
-            android:id="@+id/hcibpa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="124dp"
-            android:layout_marginRight="124dp"
-            android:ems="10"
-            android:textColorHint="@color/teal_700"
-            android:gravity="center_horizontal"
-            android:hint="@string/enter_diastolic_bp"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:textColor="@color/teal_200"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/hicsugar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hicbp" />
+    <EditText
+        android:id="@+id/hcibpa"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_diastolic_bp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/teal_700"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hicsugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hicbp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/score"
