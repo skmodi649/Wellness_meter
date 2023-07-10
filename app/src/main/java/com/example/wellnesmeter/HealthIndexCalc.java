@@ -228,18 +228,18 @@ public class HealthIndexCalc extends AppCompatActivity {
     }
 
     public double CALCIUM() {
-        String sodstr = hcicalcium.getText().toString().trim();
+        String calstr = hcicalcium.getText().toString().trim();
 
-        if(sodstr.isEmpty()){
+        if(calstr.isEmpty()){
             hcicalcium.setError("Sodium level is required!");
             hcicalcium.requestFocus();
             return 0;
         }
 
-        double sodval = Double.parseDouble(sodstr);
-        sodval = Math.round(sodval * 100.0) / 100.0;
+        double calval = Double.parseDouble(calstr);
+        calval = Math.round(calval * 100.0) / 100.0;
 
-        if (sodval >= 8.6 && sodval <= 10.4) {
+        if (calval >= 8.6 && calval <= 10.3) {
             return 10;
         } else {
             return 6;

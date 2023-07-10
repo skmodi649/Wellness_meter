@@ -12,7 +12,7 @@ public class TermsAndConditions extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_conditions);
+        setContentView(R.layout.activity_instructions);
         Button ok = findViewById(R.id.agree);
         ok.setOnClickListener(this);
 

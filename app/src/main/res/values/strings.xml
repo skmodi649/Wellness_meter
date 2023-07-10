@@ -86,4 +86,34 @@
     <string name="menu_Open">Open</string>
     <string name="menu_Close">Close</string>
 
+    <string name="text_with_paragraphs">
+        The App provides a wellness score calculation based on various health-related parameters and data input by the user.\n
+        The wellness score is provided for informational purposes only and should not be considered as professional medical advice.\n\n
+        The Wellness Score will be based on following parameters:\n\n
+        1. Body Mass Index(BMI):\n
+         (a) less than 18.5 then score = 7.0\n
+         (b) within 18.50 and 25 then score = 10\n
+         (c) within 25 and 30 then score = 7\n
+         (d) within 30 and 40 then score = 5\n
+         (e) more than 40 then score = 4\n\n
+
+       2. Pulse Rate:\n
+        (a) Within 60 and 100 then score = 10.0\n
+        (b) less than 60 then score = normalised\n
+        (c) more than 100 then score = normalised\n\n
+
+       3. Sugar Level:\n
+        (a) Within 70 and 100 then score = 10.0\n
+        (b) less than 70 then score = 5.0\n
+        (c) within 100 and 125 then score = 8.0\n\n
+
+       4. Cholesterol level\n
+        (a) age less than or equal to 19 and level less than 170 then score = 10.0\n
+        (b) age less than or equal to 19 and level > 170 then score = normalised\n
+        (c) age > 19 and level within 125 and 200 then score = 10.0\n
+        (d) age > 19 and level less than 125 then score = normalised\n
+        (e) age > 19 and level more than 200 then score = normalised\n\n
+
+    </string>
+
 </resources>
