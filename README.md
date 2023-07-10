@@ -15,6 +15,14 @@ The android app:<br>
 - Maintains the history of user's health and provided them with suggestions help improve it. 
 - Provides users with list of doctors specialising in various domains like Cardiography, Dentistry, Psychology etc. 
 
+## App Demo
+
+
+
+https://github.com/skmodi649/Wellness_meter/assets/76468931/6c46486c-11f8-49c3-9025-84cacd42692b
+
+
+
 ## Screenshots
 <p align="center">
    <img src="https://github.com/skmodi649/Wellness_meter/assets/76468931/ef2e2d78-d76b-4446-b587-ae406e1aceb8.png" align="left">
